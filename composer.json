@@ -7,6 +7,10 @@
         "drupal": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        "xb_demo": {
+            "type": "path",
+            "url": "recipes/xb_demo"
         }
     },
     "require": {
@@ -28,8 +32,9 @@
         "drupal/drupal_cms_project": "^1",
         "drupal/drupal_cms_seo_tools": "^1.0.1",
         "drupal/drupal_cms_starter": "^1.0.1",
-        "drupal/experience_builder": "0.x-dev@dev",
+        "drupal/experience_builder": "@dev",
         "drupal/project_browser": "@alpha",
+        "drupal/recipe_installer_kit": "@dev",
         "drupal/webform": "@beta",
         "drush/drush": "^13"
     },

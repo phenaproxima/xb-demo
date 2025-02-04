@@ -1,5 +1,5 @@
 services:
-  Drupal\drupal_cms_installer\RecipeAppliedSubscriber:
+  Drupal\RecipeKit\Installer\RecipeAppliedSubscriber:
     autowire: true
     tags:
       - { name: event_subscriber }
