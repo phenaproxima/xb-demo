@@ -12,15 +12,10 @@
 <div class="cms-installer">
   <header class="cms-installer__header">
     <h1 class="cms-installer__heading">
-      <img src="{{ images_path }}/drupal-cms-logo.svg" alt="{{ 'Drupal CMS'|t }}" />
+      <img src="{{ theme_path }}/images/drupal-cms-logo.svg" alt="{{ 'Drupal CMS'|t }}" />
     </h1>
   </header>
   <div class="cms-installer__wrapper">
-    {% if page.sidebar_first %}
-      <aside class="cms-installer__sidebar-first">
-        {{ page.sidebar_first }}
-      </aside>
-    {% endif %}
 
     <main class="cms-installer__main">
       {% if title %}

@@ -19,7 +19,7 @@
   --gin-color-title: #222330;
   --gin-color-text: #222330;
   --gin-color-text-light: #545560;
-  --gin-color-focus: rgba(0, 125, 250, .6);
+  --gin-color-focus: rgb(8, 113, 243);
   --gin-color-focus-border: rgba(0, 0, 0, .2);
   --gin-color-focus-neutral-rgb: rgba(0, 0, 0, .4);
   --gin-color-disabled: #8d8d8d;

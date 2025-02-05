@@ -34,7 +34,7 @@
         "drupal/drupal_cms_starter": "^1.0.1",
         "drupal/experience_builder": "@dev",
         "drupal/project_browser": "@alpha",
-        "drupal/recipe_installer_kit": "@dev",
+        "drupal/recipe_installer_kit": "^1@alpha",
         "drupal/webform": "@beta",
         "drush/drush": "^13"
     },
