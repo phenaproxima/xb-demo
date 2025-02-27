@@ -18,3 +18,7 @@ config:
     # Re-enable the components provided by Drupal CMS.
     experience_builder.component.sdc.drupal_cms_olivero.*:
       enable: []
+    project_browser.admin_settings:
+      simpleConfigUpdate:
+        enabled_sources:
+          - drupalorg_jsonapi
