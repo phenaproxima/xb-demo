@@ -22,3 +22,7 @@ config:
       disable: []
     block.block.drupal_cms_olivero_page_title:
       disable: []
+    project_browser.admin_settings:
+      simpleConfigUpdate:
+        enabled_sources:
+          - drupalorg_jsonapi
