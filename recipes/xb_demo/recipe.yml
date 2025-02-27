@@ -19,8 +19,6 @@ config:
     experience_builder.component.sdc.drupal_cms_olivero.*:
       enable: []
     block.block.drupal_cms_olivero_breadcrumbs:
-      simpleConfigUpdate:
-        status: false
+      disable: []
     block.block.drupal_cms_olivero_page_title:
-      simpleConfigUpdate:
-        status: false
+      disable: []
