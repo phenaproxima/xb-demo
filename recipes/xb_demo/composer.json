@@ -3,6 +3,6 @@
     "type": "drupal-recipe",
     "require": {
         "drupal/core": "^11.1",
-        "drupal/experience_builder": "0.x-dev"
+        "drupal/experience_builder": "0.2.0-alpha1"
     }
 }
