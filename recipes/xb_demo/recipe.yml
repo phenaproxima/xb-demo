@@ -26,6 +26,3 @@ config:
       simpleConfigUpdate:
         enabled_sources:
           - drupalorg_jsonapi
-    system.site:
-      simpleConfigUpdate:
-        name: Experience Builder Demo
