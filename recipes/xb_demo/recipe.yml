@@ -2,6 +2,7 @@ name: Experience Builder
 type: Demo
 description: A demonstration of the next-generation Experience Builder for Drupal.
 install:
+  - block
   - experience_builder
 config:
   import:
