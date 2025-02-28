@@ -60,5 +60,8 @@ function drupal_cms_installer_form_install_configure_form_alter(array &$form): v
  * Uninstalls the Node module.
  */
 function xb_demo_uninstall_node(): void {
+  $storage = Drupal::entityTypeManager()->getStorage('node');
+  $all_content = $storage->loadMultiple();
+  $storage->delete($all_content);
   Drupal::service('module_installer')->uninstall(['node']);
 }
