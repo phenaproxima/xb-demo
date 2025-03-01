@@ -10,27 +10,12 @@ distribution:
     finish_url: '/xb/xb_page/1'
     theme: drupal_cms_installer_theme
 
-forms:
-  - '\Drupal\RecipeKit\Installer\Form\RecipesForm'
-  - '\Drupal\RecipeKit\Installer\Form\SiteNameForm'
+forms: []
 
 recipes:
   required:
     - drupal/drupal_cms_starter
     - drupal/xb_demo
-  optional:
-    'Blog':
-      - drupal/drupal_cms_blog
-    'Case Studies':
-      - drupal/drupal_cms_case_study
-    'Events':
-      - drupal/drupal_cms_events
-    'News':
-      - drupal/drupal_cms_news
-    'Person Profiles':
-      - drupal/drupal_cms_person
-    'Projects':
-      - drupal/drupal_cms_project
 
 # Explicitly provide an empty list of themes -- this prevents the installer from
 # injecting Stark into it.

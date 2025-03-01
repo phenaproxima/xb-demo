@@ -10,8 +10,12 @@ use Drupal\RecipeKit\Installer\Messenger;
 /**
  * Implements hook_install_tasks().
  */
-function drupal_cms_installer_install_tasks(): array {
-  $tasks = Hooks::installTasks();
+function drupal_cms_installer_install_tasks(array &$install_state): array {
+  $install_state['parameters']['site_name'] = 'Experience Builder Demo';
+
+  $tasks = [
+    'xb_demo_uninstall_node' => [],
+  ] + Hooks::installTasks();
 
   if (getenv('IS_DDEV_PROJECT')) {
     Messenger::reject(
@@ -52,4 +56,14 @@ function drupal_cms_installer_form_install_configure_form_alter(array &$form): v
   // We always install Automatic Updates, so we don't need to expose the update
   // notification settings.
   $form['update_notifications']['#access'] = FALSE;
+}
+
+/**
+ * Uninstalls the Node module.
+ */
+function xb_demo_uninstall_node(): void {
+  $storage = Drupal::entityTypeManager()->getStorage('node');
+  $all_content = $storage->loadMultiple();
+  $storage->delete($all_content);
+  Drupal::service('module_installer')->uninstall(['node']);
 }
