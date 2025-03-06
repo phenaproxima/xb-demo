@@ -4,6 +4,7 @@ description: A demonstration of the next-generation Experience Builder for Drupa
 install:
   - block
   - experience_builder
+  - gin
   - project_browser
 config:
   import:
@@ -24,6 +25,9 @@ config:
       disable: []
     block.block.drupal_cms_olivero_page_title:
       disable: []
+    gin.settings:
+      simpleConfigUpdate:
+        secondary_toolbar_frontend: false
     project_browser.admin_settings:
       simpleConfigUpdate:
         enabled_sources:
