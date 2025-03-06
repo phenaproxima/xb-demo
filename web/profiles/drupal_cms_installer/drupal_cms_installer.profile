@@ -7,6 +7,7 @@ use Drupal\Core\DefaultContent\Importer;
 use Drupal\Core\Entity\EntityRepositoryInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Site\Settings;
+use Drupal\dashboard\Entity\Dashboard;
 use Drupal\RecipeKit\Installer\Hooks;
 use Drupal\RecipeKit\Installer\Messenger;
 
@@ -75,4 +76,12 @@ function xb_demo_alter_welcome_links(): void {
   \Drupal::service(Importer::class)->importContent(
     new Finder(__DIR__ . '/content/menu_link_content'),
   );
+
+  // Replace the dashboard's recent content block with a listing of pages.
+  $dashboard = Dashboard::load('welcome');
+  $component = $dashboard->getSection(0)->getComponent('95005442-e22e-4068-bcac-814fb6c1ccc4');
+  ['configuration' => $configuration] = $component->toArray();
+  $configuration['id'] = 'views_block:pages-block_1';
+  $component->setConfiguration($configuration);
+  $dashboard->save();
 }
