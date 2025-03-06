@@ -33,22 +33,16 @@
     },
     "require": {
         "composer/installers": "^2.3",
+        "cweagans/composer-patches": "^2@beta",
         "drupal/core-composer-scaffold": "^11.1.1",
         "drupal/core-project-message": "^11.1.1",
         "drupal/core-recommended": "^11.1.1",
-        "drupal/drupal_cms_accessibility_tools": "^1",
-        "drupal/drupal_cms_ai": "^1.0.1",
-        "drupal/drupal_cms_analytics": "^1",
-        "drupal/drupal_cms_forms": "^1",
-        "drupal/drupal_cms_news": "^1.0.1",
         "drupal/drupal_cms_olivero": "1.0.x-dev",
         "drupal/drupal_cms_page": "^1.0.1",
-        "drupal/drupal_cms_seo_tools": "^1.0.1",
         "drupal/drupal_cms_starter": "^1.0.1",
         "drupal/experience_builder": "@alpha",
         "drupal/project_browser": "@alpha",
         "drupal/recipe_installer_kit": "^1-alpha3@alpha",
-        "drupal/webform": "@beta",
         "drupal/xb_demo": "@dev",
         "drush/drush": "^13"
     },
@@ -60,6 +54,7 @@
     "config": {
         "allow-plugins": {
             "composer/installers": true,
+            "cweagans/composer-patches": true,
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
             "php-http/discovery": true
