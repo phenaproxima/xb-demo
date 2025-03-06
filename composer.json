@@ -79,6 +79,11 @@
             "web/profiles/custom/{$name}": ["type:drupal-custom-profile"],
             "recipes/{$name}": ["type:drupal-recipe"],
             "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
+        },
+        "patches": {
+            "drupal/experience_builder": {
+                "#3511402: You won't believe this one line fix to make views integration work for listing XB pages": "https://git.drupalcode.org/project/experience_builder/-/merge_requests/755.diff"
+            }
         }
     }
 }
