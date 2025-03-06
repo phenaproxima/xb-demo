@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use Drupal\Core\Entity\EntityRepositoryInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Site\Settings;
 use Drupal\RecipeKit\Installer\Hooks;
@@ -12,7 +13,10 @@ use Drupal\RecipeKit\Installer\Messenger;
  */
 function drupal_cms_installer_install_tasks(array &$install_state): array {
   $install_state['parameters']['site_name'] = 'Experience Builder Demo';
-  $tasks = Hooks::installTasks();
+
+  $tasks = [
+    'xb_demo_alter_welcome_links' => [],
+  ] + Hooks::installTasks();
 
   if (getenv('IS_DDEV_PROJECT')) {
     Messenger::reject(
@@ -53,4 +57,14 @@ function drupal_cms_installer_form_install_configure_form_alter(array &$form): v
   // We always install Automatic Updates, so we don't need to expose the update
   // notification settings.
   $form['update_notifications']['#access'] = FALSE;
+}
+
+function xb_demo_alter_welcome_links(): void {
+  // Remove the "Create content" link, since this demo is not content-first.
+  \Drupal::service(EntityRepositoryInterface::class)
+    ->loadEntityByUuid('menu_link_content', '848d74e6-922c-42c4-9049-7004fac527c3')
+    ?->delete();
+
+  // @todo Import content shipped with this demo, which should include a pair
+  // of menu_link_content entities.
 }
