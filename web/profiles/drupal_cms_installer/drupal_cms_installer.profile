@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+use Drupal\Core\DefaultContent\Finder;
+use Drupal\Core\DefaultContent\Importer;
 use Drupal\Core\Entity\EntityRepositoryInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Site\Settings;
@@ -11,9 +13,7 @@ use Drupal\RecipeKit\Installer\Messenger;
 /**
  * Implements hook_install_tasks().
  */
-function drupal_cms_installer_install_tasks(array &$install_state): array {
-  $install_state['parameters']['site_name'] = 'Experience Builder Demo';
-
+function drupal_cms_installer_install_tasks(): array {
   $tasks = [
     'xb_demo_alter_welcome_links' => [],
   ] + Hooks::installTasks();
@@ -57,6 +57,12 @@ function drupal_cms_installer_form_install_configure_form_alter(array &$form): v
   // We always install Automatic Updates, so we don't need to expose the update
   // notification settings.
   $form['update_notifications']['#access'] = FALSE;
+
+  // Hard-code the initial site name.
+  $form['site_information']['site_name'] = [
+    '#type' => 'hidden',
+    '#default_value' => 'Experience Builder Demo',
+  ];
 }
 
 function xb_demo_alter_welcome_links(): void {
@@ -65,6 +71,8 @@ function xb_demo_alter_welcome_links(): void {
     ->loadEntityByUuid('menu_link_content', '848d74e6-922c-42c4-9049-7004fac527c3')
     ?->delete();
 
-  // @todo Import content shipped with this demo, which should include a pair
-  // of menu_link_content entities.
+  // Import menu links shipped with this demo.
+  \Drupal::service(Importer::class)->importContent(
+    new Finder(__DIR__ . '/content/menu_link_content'),
+  );
 }
