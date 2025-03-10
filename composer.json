@@ -37,6 +37,7 @@
         "drupal/core": "@dev",
         "drupal/core-composer-scaffold": "11.x-dev@dev",
         "drupal/core-recommended": "11.x-dev@dev",
+        "drupal/default_content": "^2-alpha@alpha",
         "drupal/demo_design_system": "1.0.x-dev@dev",
         "drupal/drupal_cms_olivero": "1.0.x-dev",
         "drupal/drupal_cms_starter": "^1.0.1",
