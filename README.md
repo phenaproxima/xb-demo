@@ -17,7 +17,7 @@ ddev config --project-type=drupal11 --docroot=web
 ddev composer create phenaproxima/xb-demo --stability=dev
 ddev launch
 ```
-You don't _have_ to use DDEV; any tech stack that supports Drupal should work just fine.
+You don't _have_ to use DDEV; any tech stack that supports Drupal should work just fine. But you'll need NPM installed in order to build the theme's JavaScript.
 
 ## Getting Help
 Questions? Feedback? Bugs? [Find us in the #experience-builder channel on Drupal Slack.](https://drupal.slack.com/archives/C072JMEPUS1)

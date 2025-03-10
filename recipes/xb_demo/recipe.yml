@@ -1,12 +1,18 @@
 name: Experience Builder
 type: Demo
 description: A demonstration of the next-generation Experience Builder for Drupal.
+recipes:
+  - starshot_demo_recipe_blocks
+  - starshot_demo_recipe_files
+  - starshot_demo_recipe_media
+  - starshot_demo_recipe_menus
 install:
   - block
   - experience_builder
   - gin
   - navigation_top_bar
   - project_browser
+  - starshot_demo
 config:
   import:
     experience_builder:
@@ -33,3 +39,6 @@ config:
       simpleConfigUpdate:
         enabled_sources:
           - drupalorg_jsonapi
+    system.theme:
+      simpleConfigUpdate:
+        default: starshot_demo

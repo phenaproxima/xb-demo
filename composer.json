@@ -86,5 +86,15 @@
                 "#3511416: Integrate with the Navigation Top Bar": "https://git.drupalcode.org/project/experience_builder/-/merge_requests/760.diff"
             }
         }
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "@putenv DDS_PATH=web/themes/contrib/demo_design_system",
+            "@putenv DEMO_THEME_PATH=web/themes/contrib/demo_design_system/starshot_demo",
+            "npm --prefix $DDS_PATH install",
+            "npm --prefix $DEMO_THEME_PATH install",
+            "npm --prefix $DDS_PATH run build",
+            "npm --prefix $DEMO_THEME_PATH run build"
+        ]
     }
 }
