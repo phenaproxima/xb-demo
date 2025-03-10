@@ -3,6 +3,7 @@ type: Demo
 description: A demonstration of the next-generation Experience Builder for Drupal.
 recipes:
   - core/recipes/basic_block_type
+  - core/recipes/basic_html_format_editor
   - core/recipes/full_html_format_editor
   - starshot_demo_recipe_blocks
   - starshot_demo_recipe_files
