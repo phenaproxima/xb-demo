@@ -77,13 +77,6 @@
             "web/profiles/custom/{$name}": ["type:drupal-custom-profile"],
             "recipes/{$name}": ["type:drupal-recipe"],
             "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
-        },
-        "patches": {
-            "drupal/experience_builder": {
-                "#3511402: You won't believe this one line fix to make views integration work for listing XB pages": "https://git.drupalcode.org/project/experience_builder/-/merge_requests/755.diff",
-                "#3511412: Add a local task to edit pages in XB": "https://git.drupalcode.org/project/experience_builder/-/merge_requests/756.diff",
-                "#3511416: Integrate with the Navigation Top Bar": "https://git.drupalcode.org/project/experience_builder/-/merge_requests/760.diff"
-            }
         }
     }
 }
