@@ -11,6 +11,7 @@ config:
   import:
     experience_builder:
       - image.style.xb_avatar
+      - experience_builder.xb_asset_library.global
   actions:
     # Disable all components XB generated during installation. Some components
     # have two- or three-part identifiers, so we need to disable those
