@@ -5,15 +5,12 @@ recipes:
   - core/recipes/administrator_role
   - core/recipes/core_recommended_maintenance
   - core/recipes/core_recommended_performance
-  - core/recipes/document_media_type
   - drupal_cms_admin_ui
   - drupal_cms_anti_spam
   - drupal_cms_authentication
   - drupal_cms_page
   - drupal_cms_privacy_basic
-  - drupal_cms_remote_video
   - drupal_cms_seo_basic
-  - easy_email_express
   - starshot_demo_content
 install:
   - block
@@ -22,10 +19,7 @@ install:
   - navigation_top_bar
   - starshot_demo
   - automated_cron
-  - automatic_updates
-  - automatic_updates_extensions
   - dashboard
-  - drupal_cms_olivero
   - eca_base
   - eca_config
   - eca_content
@@ -34,9 +28,6 @@ install:
   - eca_render
   - eca_user
   - menu_link_content
-  - olivero
-  - package_manager
-  - project_browser
   # The rest of these are in Standard.
   - inline_form_errors
   - config
@@ -124,14 +115,3 @@ config:
           weight: 0
           expanded: false
           enabled: false
-    automatic_updates.settings:
-      simpleConfigUpdate:
-        allow_core_minor_updates: true
-    # Enable the name field in the entity form so it can be modified.
-    core.entity_form_display.media.document.*:
-      setComponent:
-        name: name
-        options:
-          type: string_textfield
-          weight: -1
-          region: content
