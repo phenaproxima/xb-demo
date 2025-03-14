@@ -60,7 +60,7 @@
             "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
         },
         "patches": {
-            "drupal/gin_toolbar": {
+            "drupal/gin": {
                 "#3497793: Dialog styles are not loading correctly in Experience Builder": "https://www.drupal.org/files/issues/2025-02-11/gin-changes.patch"
             }
         }
