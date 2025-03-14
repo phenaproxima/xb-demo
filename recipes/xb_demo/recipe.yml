@@ -1,4 +1,4 @@
-name: Experience Builder
+name: Experience Builder Demo
 type: Demo
 description: A demonstration of the next-generation Experience Builder for Drupal.
 recipes:
@@ -8,7 +8,6 @@ install:
   - experience_builder
   - gin
   - navigation_top_bar
-  - project_browser
   - starshot_demo
 config:
   import:
@@ -26,17 +25,9 @@ config:
     # Re-enable the components provided by Drupal CMS.
     experience_builder.component.sdc.drupal_cms_olivero.*:
       enable: []
-    block.block.drupal_cms_olivero_breadcrumbs:
-      disable: []
-    block.block.drupal_cms_olivero_page_title:
-      disable: []
     gin.settings:
       simpleConfigUpdate:
         secondary_toolbar_frontend: false
-    project_browser.admin_settings:
-      simpleConfigUpdate:
-        enabled_sources:
-          - drupalorg_jsonapi
     system.performance:
       simpleConfigUpdate:
         css.preprocess: false
@@ -44,3 +35,5 @@ config:
     system.theme:
       simpleConfigUpdate:
         default: starshot_demo
+      simpleConfigUpdate:
+        admin: gin
