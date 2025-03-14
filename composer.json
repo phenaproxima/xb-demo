@@ -4,24 +4,6 @@
     "type": "project",
     "license": "GPL-2.0-or-later",
     "repositories": {
-        "drupal_cms_olivero": {
-            "type": "package",
-            "package": {
-                "name": "drupal/drupal_cms_olivero",
-                "version": "dev-1.x",
-                "type": "drupal-theme",
-                "source": {
-                    "type": "git",
-                    "url": "https://git.drupalcode.org/project/drupal_cms_olivero.git",
-                    "reference": "1.x"
-                },
-                "extra": {
-                    "branch-alias": {
-                        "dev-1.x": "1.0.x-dev"
-                    }
-                }
-            }
-        },
         "drupal": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
@@ -39,10 +21,7 @@
         "drupal/core-recommended": "11.x-dev@dev",
         "drupal/default_content": "^2-alpha@alpha",
         "drupal/demo_design_system": "1.0.x-dev@dev",
-        "drupal/drupal_cms_olivero": "1.0.x-dev",
-        "drupal/drupal_cms_starter": "^1.0.1",
         "drupal/experience_builder": "@alpha",
-        "drupal/project_browser": "@alpha",
         "drupal/recipe_installer_kit": "^1-alpha3@alpha",
         "drupal/xb_demo": "@dev",
         "drush/drush": "^13"
