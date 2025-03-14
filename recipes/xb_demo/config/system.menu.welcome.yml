@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: welcome
+label: Welcome
+description: 'Things users can do when they start using Drupal CMS.'
+locked: false

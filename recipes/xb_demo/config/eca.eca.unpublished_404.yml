@@ -1,0 +1,80 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - eca_base
+    - eca_content
+    - eca_misc
+    - eca_user
+id: unpublished_404
+modeller: bpmn_io
+label: 'Unpublished 404'
+version: 1.0.0
+weight: 0
+events:
+  Event_uncaught_exception:
+    plugin: 'kernel:exception_status_code'
+    label: 'Uncaught Exception'
+    configuration: {  }
+    successors:
+      -
+        id: Activity_and
+        condition: Flow_is_403
+conditions:
+  Flow_is_403:
+    plugin: eca_scalar
+    configuration:
+      negate: false
+      case: false
+      left: '[event:code]'
+      right: '403'
+      operator: equal
+      type: value
+  Flow_unpublished:
+    plugin: eca_entity_field_value
+    configuration:
+      case: false
+      expected_value: '1'
+      field_name: status
+      operator: equal
+      type: value
+      negate: true
+      entity: node
+gateways: {  }
+actions:
+  Activity_and:
+    plugin: eca_void_and_condition
+    label: AND
+    configuration: {  }
+    successors:
+      -
+        id: Activity_switch_user_1
+        condition: ''
+  Activity_switch_user_1:
+    plugin: eca_switch_account
+    label: 'Switch to user 1'
+    configuration:
+      user_id: '1'
+    successors:
+      -
+        id: Activity_load_node_from_route
+        condition: ''
+  Activity_load_node_from_route:
+    plugin: eca_token_load_route_param
+    label: 'Load node from route'
+    configuration:
+      token_name: node
+      request: '2'
+      parameter_name: node
+    successors:
+      -
+        id: Activity_not_found_exception
+        condition: Flow_unpublished
+  Activity_not_found_exception:
+    plugin: eca_throw_exception
+    label: 'Not found exception'
+    configuration:
+      exception_type: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
+      response_message: ''
+      log_exception: false
+    successors: {  }

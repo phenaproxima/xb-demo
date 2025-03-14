@@ -1,0 +1,35 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: e593b567-2ff6-483e-9d80-ccbd49230c2c
+  bundle: image
+  default_langcode: en
+  depends:
+    05439bd3-1c60-4e1a-8719-e9da071e88e4: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: drupal-cms-hero.png
+  created:
+    -
+      value: 1733288974
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+  field_media_image:
+    -
+      entity: 05439bd3-1c60-4e1a-8719-e9da071e88e4
+      alt: 'A bunch of laptops on a table from above'
+      title: ''
+      width: 2700
+      height: 1080

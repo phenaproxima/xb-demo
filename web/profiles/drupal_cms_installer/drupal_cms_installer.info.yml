@@ -14,7 +14,6 @@ forms: []
 
 recipes:
   required:
-    - drupal/drupal_cms_starter
     - drupal/xb_demo
 
 # Explicitly provide an empty list of themes -- this prevents the installer from

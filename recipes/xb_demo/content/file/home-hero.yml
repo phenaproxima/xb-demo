@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 05439bd3-1c60-4e1a-8719-e9da071e88e4
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: drupal-cms-hero.png
+  uri:
+    -
+      value: 'public://2024-12/drupal-cms-hero.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 3978457
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1733288974

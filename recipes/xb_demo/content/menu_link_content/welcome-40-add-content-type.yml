@@ -1,0 +1,36 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: c51055ce-c9f1-4324-8fc5-d8db339a4eaf
+  bundle: menu_link_content
+  default_langcode: en
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'Create content type'
+  menu_name:
+    -
+      value: welcome
+  link:
+    -
+      uri: 'internal:/admin/structure/types/add'
+      title: ''
+      options: {  }
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: 40
+  expanded:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true

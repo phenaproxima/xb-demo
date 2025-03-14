@@ -1,0 +1,36 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 9eee71db-25ef-4de2-9175-86082d7852a7
+  bundle: menu_link_content
+  default_langcode: en
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'Invite users to collaborate'
+  menu_name:
+    -
+      value: welcome
+  link:
+    -
+      uri: 'internal:/admin/people/create'
+      title: ''
+      options: {  }
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: 80
+  expanded:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true

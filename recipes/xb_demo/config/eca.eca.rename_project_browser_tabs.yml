@@ -1,0 +1,45 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - eca_project_browser
+id: rename_project_browser_tabs
+modeller: bpmn_io
+label: 'Rename Project Browser tabs'
+version: 1.0.0
+weight: 0
+events:
+  Event_alter_source_info:
+    plugin: 'project_browser:source_info_alter'
+    label: 'Alter source plugin info'
+    configuration: {  }
+    successors:
+      -
+        id: Activity_set_title
+        condition: ''
+      -
+        id: Activity_0dlv38b
+        condition: ''
+conditions: {  }
+gateways: {  }
+actions:
+  Activity_set_title:
+    plugin: eca_project_browser_source_plugin_info_alter
+    label: 'Change title of recipes tab'
+    configuration:
+      plugin_id: recipes
+      label: ''
+      description: ''
+      local_task_title: Recommended
+      local_task_weight: '0'
+    successors: {  }
+  Activity_0dlv38b:
+    plugin: eca_project_browser_source_plugin_info_alter
+    label: 'Change title of contributed modules tab'
+    configuration:
+      plugin_id: drupalorg_jsonapi
+      label: ''
+      description: ''
+      local_task_title: 'Browse modules'
+      local_task_weight: ''
+    successors: {  }

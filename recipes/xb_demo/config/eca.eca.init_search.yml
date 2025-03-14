@@ -1,0 +1,62 @@
+# By resetting the last cron run time, this forces the `content` search index
+# to be rebuilt when it is created, because the next page request will run
+# cron via the automated_cron module. This can be removed when there is a
+# config action to rebuild a search index, or some other way for a recipe to
+# trigger a cron run.
+langcode: en
+status: true
+dependencies:
+  module:
+    - eca_base
+    - eca_config
+id: init_search
+modeller: bpmn_io
+label: 'Initialize search index'
+version: 1.0.0
+weight: 0
+events:
+  Event_write_config:
+    plugin: 'config:save'
+    label: 'Write config'
+    configuration: {  }
+    successors:
+      -
+        id: Gateway_and_1
+        condition: Flow_is_search_index
+conditions:
+  Flow_is_search_index:
+    plugin: eca_scalar
+    configuration:
+      negate: false
+      case: false
+      left: '[config_name]'
+      right: search_api.index.content
+      operator: equal
+      type: value
+  Flow_is_new:
+    plugin: eca_scalar
+    configuration:
+      case: false
+      left: '[config_original:name]'
+      right: '[config:name]'
+      operator: equal
+      type: value
+      negate: true
+gateways:
+  Gateway_and_1:
+    type: 0
+    successors:
+      -
+        id: Activity_reset_last_cron_run
+        condition: Flow_is_new
+actions:
+  Activity_reset_last_cron_run:
+    plugin: eca_keyvaluestore_write
+    label: 'Reset last cron run'
+    configuration:
+      collection: state
+      key: system.cron_last
+      value: '0'
+      use_yaml: false
+      ifnotexists: false
+    successors: {  }

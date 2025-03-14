@@ -1,0 +1,70 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.welcome
+    - views.view.recent_content
+  module:
+    - announcements_feed
+    - layout_builder
+    - layout_discovery
+    - system
+    - views
+id: welcome
+label: 'Welcome to your site'
+description: 'Presented to users when they complete the Drupal CMS install process.'
+layout:
+  -
+    layout_id: layout_twocol_section
+    layout_settings:
+      label: 'Content and tasks'
+      context_mapping: {  }
+      column_widths: 67-33
+    components:
+      cb457c1c-83c2-4a79-a09e-2c64a8bf8fb8:
+        uuid: cb457c1c-83c2-4a79-a09e-2c64a8bf8fb8
+        region: second
+        configuration:
+          id: 'system_menu_block:welcome'
+          label: 'Top tasks'
+          label_display: visible
+          provider: system
+          context_mapping: {  }
+          level: 1
+          depth: 1
+          expand_all_items: false
+        weight: 0
+        additional: {  }
+      95005442-e22e-4068-bcac-814fb6c1ccc4:
+        uuid: 95005442-e22e-4068-bcac-814fb6c1ccc4
+        region: first
+        configuration:
+          id: 'views_block:recent_content-block_recent_content'
+          label: ''
+          label_display: visible
+          provider: views
+          context_mapping: {  }
+          views_label: ''
+          items_per_page: none
+        weight: 0
+        additional: {  }
+    third_party_settings: {  }
+  -
+    layout_id: layout_onecol
+    layout_settings:
+      label: Announcements
+      context_mapping: {  }
+    components:
+      237ad3cf-cb2b-4991-a107-efafbef5f846:
+        uuid: 237ad3cf-cb2b-4991-a107-efafbef5f846
+        region: content
+        configuration:
+          id: announce_block
+          label: Announcements
+          label_display: visible
+          provider: announcements_feed
+          context_mapping: {  }
+        weight: 0
+        additional: {  }
+    third_party_settings: {  }
+weight: 0

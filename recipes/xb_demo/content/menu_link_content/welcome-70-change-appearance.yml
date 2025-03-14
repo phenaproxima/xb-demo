@@ -1,0 +1,36 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 5e5c03a2-4db1-41be-a789-693d24f0a5c1
+  bundle: menu_link_content
+  default_langcode: en
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'Change site appearance'
+  menu_name:
+    -
+      value: welcome
+  link:
+    -
+      uri: 'internal:/admin/appearance'
+      title: ''
+      options: {  }
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: 70
+  expanded:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
