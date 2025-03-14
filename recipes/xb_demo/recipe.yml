@@ -24,7 +24,6 @@ install:
   - eca_config
   - eca_content
   - eca_misc
-  - eca_project_browser
   - eca_render
   - eca_user
   - menu_link_content
