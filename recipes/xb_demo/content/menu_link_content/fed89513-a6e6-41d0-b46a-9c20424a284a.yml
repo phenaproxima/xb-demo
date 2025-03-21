@@ -13,7 +13,7 @@ default:
       value: Facebook
   menu_name:
     -
-      value: social-media
+      value: starshot-demo-social-media
   link:
     -
       uri: 'https://www.facebook.com/DrupalOpenSource/'

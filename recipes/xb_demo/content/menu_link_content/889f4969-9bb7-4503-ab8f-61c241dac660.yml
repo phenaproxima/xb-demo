@@ -13,7 +13,7 @@ default:
       value: News
   menu_name:
     -
-      value: footer
+      value: starshot-demo-about
   link:
     -
       uri: 'https://www.drupal.org/news'

@@ -13,7 +13,7 @@ default:
       value: Instagram
   menu_name:
     -
-      value: social-media
+      value: starshot-demo-social-media
   link:
     -
       uri: 'https://www.instagram.com/drupalassociation/'

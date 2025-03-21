@@ -13,7 +13,7 @@ default:
       value: Mastodon
   menu_name:
     -
-      value: social-media
+      value: starshot-demo-social-media
   link:
     -
       uri: 'https://mastodon.social/@drupal'

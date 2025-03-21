@@ -13,7 +13,7 @@ default:
       value: 'Get Support'
   menu_name:
     -
-      value: main
+      value: starshot-demo-main
   link:
     -
       uri: 'https://www.drupal.org/drupal-services'

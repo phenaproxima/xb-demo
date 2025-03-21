@@ -13,7 +13,7 @@ default:
       value: X/Twitter
   menu_name:
     -
-      value: social-media
+      value: starshot-demo-social-media
   link:
     -
       uri: 'http://x.com/drupal'

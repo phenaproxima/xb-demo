@@ -13,7 +13,7 @@ default:
       value: 'Privacy Policy'
   menu_name:
     -
-      value: footer
+      value: starshot-demo-policy
   link:
     -
       uri: 'https://www.drupal.org/privacy'

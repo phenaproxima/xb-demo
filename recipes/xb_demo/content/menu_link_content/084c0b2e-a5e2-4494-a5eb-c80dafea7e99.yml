@@ -13,7 +13,7 @@ default:
       value: 'Get Started'
   menu_name:
     -
-      value: account
+      value: starshot-demo-user
   link:
     -
       uri: 'https://new.drupal.org/home'

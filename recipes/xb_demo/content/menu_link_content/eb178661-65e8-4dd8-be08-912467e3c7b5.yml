@@ -13,7 +13,7 @@ default:
       value: YouTube
   menu_name:
     -
-      value: social-media
+      value: starshot-demo-social-media
   link:
     -
       uri: 'https://www.youtube.com/@DrupalAssociation'

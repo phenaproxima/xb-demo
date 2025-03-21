@@ -13,7 +13,7 @@ default:
       value: 'Support Drupal'
   menu_name:
     -
-      value: main
+      value: starshot-demo-main
   link:
     -
       uri: 'https://www.drupal.org/association'

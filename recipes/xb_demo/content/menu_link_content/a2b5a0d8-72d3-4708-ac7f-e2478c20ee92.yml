@@ -13,7 +13,7 @@ default:
       value: LinkedIn
   menu_name:
     -
-      value: social-media
+      value: starshot-demo-social-media
   link:
     -
       uri: 'https://www.linkedin.com/company/drupal-project/'

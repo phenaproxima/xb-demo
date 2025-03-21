@@ -13,7 +13,7 @@ default:
       value: 'Web Accessibility'
   menu_name:
     -
-      value: footer
+      value: starshot-demo-policy
   link:
     -
       uri: 'https://www.drupal.org/about/features/accessibility'
