@@ -15,7 +15,6 @@ install:
   - block
   - experience_builder
   - gin
-  - navigation_top_bar
   - starshot_demo
   - automated_cron
   - dashboard
