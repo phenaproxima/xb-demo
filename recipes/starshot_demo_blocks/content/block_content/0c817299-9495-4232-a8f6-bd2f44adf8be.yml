@@ -19,6 +19,6 @@ default:
       value: true
   body:
     -
-      value: '<p>The <a href="https://www.drupal.org/project/demo_design_system">Starshot Demo Design System</a> theme is built for the <a href="https://www.drupal.org/about/starshot">Starshot Initiative</a> on top of <a href="https://www.civictheme.io/">CivicTheme</a>. A big thank you to all the contributors!</p><p>[fixme - add composite logo]</p>'
+      value: '<p>The <a href="https://www.drupal.org/project/demo_design_system">Starshot Demo Design System</a> theme is built for the <a href="https://www.drupal.org/about/starshot">Starshot Initiative</a> on top of <a href="https://www.civictheme.io/">CivicTheme</a>. A big thank you to all the contributors!</p>'
       format: full_html
       summary: ''
