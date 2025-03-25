@@ -36,7 +36,8 @@ config:
   import:
     experience_builder:
       - image.style.xb_avatar
-      - experience_builder.xb_asset_library.global
+      # We ship with our own (same name). Keeping it here for searching later.
+      # - experience_builder.xb_asset_library.global
     image:
       - image.style.large
       - image.style.thumbnail
