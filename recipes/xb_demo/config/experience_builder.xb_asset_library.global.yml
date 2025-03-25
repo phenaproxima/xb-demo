@@ -1,12 +1,9 @@
-uuid: ba9688ea-a2ff-4003-b104-8b12e6572837
 langcode: en
 status: true
 dependencies:
   enforced:
     module:
       - experience_builder
-_core:
-  default_config_hash: X746C-T37mdj9_8YUgW8P6k6j69NwoqYULybJXZPKBY
 id: global
 label: 'Global CSS'
 css:
