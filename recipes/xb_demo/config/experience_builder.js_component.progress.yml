@@ -18,7 +18,7 @@ props:
       - 'https://drupal.org/project/experience_builder'
     format: uri
   status:
-    title: status
+    title: Status
     type: string
     examples:
       - 'In Progress'
