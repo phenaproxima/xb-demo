@@ -1,0 +1,37 @@
+uuid: ba9688ea-a2ff-4003-b104-8b12e6572837
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - experience_builder
+_core:
+  default_config_hash: X746C-T37mdj9_8YUgW8P6k6j69NwoqYULybJXZPKBY
+id: global
+label: 'Global CSS'
+css:
+  original: |-
+    @theme {
+      --color-drupal-blue: #009cde;
+      --color-drupal-dark-blue: #006aa9;
+      --color-drupal-navy: #12285f;
+      --color-drupal-dark-navy: #091942;
+      --color-drupal-light-blue: #ccedf9;
+      --color-drupal-black: #000;
+      --color-drupal-white: #fff;
+      --color-drupal-purple: #ccbaf4;
+      --color-drupal-yellow: #ffc423;
+      --color-drupal-red: #f46351;
+      --color-drupal-dark-red: #c63c00;
+      --color-drupal-green: #397618;
+      --color-drupal-gray-darkest: #1f2420;
+      --color-drupal-gray-darker: #323946;
+      --color-drupal-gray-dark: #4f5661;
+      --color-drupal-gray-default: #6d7583;
+      --color-drupal-gray-mild: #a2acbe;
+      --color-drupal-gray-milder: #cfd4dd;
+      --color-drupal-gray-mildest: #f8f9fc;
+      --color-drupal-gray-disabled: #e7ebf3;
+    }
+  compiled: ''
+js: null
