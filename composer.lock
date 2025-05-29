@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9f8177f68702506774294b581344e1ee",
+    "content-hash": "27c1ed1b391c1257e736982c05fc3b48",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2649,20 +2649,20 @@
         },
         {
             "name": "drupal/experience_builder",
-            "version": "0.2.0-alpha6",
+            "version": "0.3.0-alpha1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/experience_builder.git",
-                "reference": "0.2.0-alpha6"
+                "reference": "0.3.0-alpha1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/experience_builder-0.2.0-alpha6.zip",
-                "reference": "0.2.0-alpha6",
-                "shasum": "98d4c69c3f9d49a8c1e5dbbfd9ccd12c3d0045b0"
+                "url": "https://ftp.drupal.org/files/projects/experience_builder-0.3.0-alpha1.zip",
+                "reference": "0.3.0-alpha1",
+                "shasum": "49096d1e111d47f69bfadfe5506e909f019930c5"
             },
             "require": {
-                "drupal/core": "^10.3 || ^11",
+                "drupal/core": "^11.1.2",
                 "justinrainbow/json-schema": "^5.2",
                 "php": ">=8.3",
                 "twig/twig": "^3.16"
@@ -2677,8 +2677,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "0.2.0-alpha6",
-                    "datestamp": "1742725021",
+                    "version": "0.3.0-alpha1",
+                    "datestamp": "1747232466",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -2715,8 +2715,16 @@
                     "homepage": "https://www.drupal.org/user/3688872"
                 },
                 {
+                    "name": "isholgueras",
+                    "homepage": "https://www.drupal.org/user/733162"
+                },
+                {
                     "name": "jessebaker",
                     "homepage": "https://www.drupal.org/user/3546546"
+                },
+                {
+                    "name": "justafish",
+                    "homepage": "https://www.drupal.org/user/161058"
                 },
                 {
                     "name": "larowlan",
@@ -2735,8 +2743,16 @@
                     "homepage": "https://www.drupal.org/user/2416470"
                 },
                 {
+                    "name": "penyaskito",
+                    "homepage": "https://www.drupal.org/user/959536"
+                },
+                {
                     "name": "tedbow",
                     "homepage": "https://www.drupal.org/user/240860"
+                },
+                {
+                    "name": "thoward216",
+                    "homepage": "https://www.drupal.org/user/3576535"
                 },
                 {
                     "name": "tim.plunkett",
@@ -9045,7 +9061,7 @@
     },
     "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": {},
-    "platform-dev": {},
+    "platform": [],
+    "platform-dev": [],
     "plugin-api-version": "2.6.0"
 }
