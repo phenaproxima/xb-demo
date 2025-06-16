@@ -1,0 +1,525 @@
+_meta:
+  version: '1.0'
+  entity_type: xb_page
+  uuid: 99464e3a-63fa-43a3-b3c0-5110eea4ad12
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Awesome Demo Experience Builder'
+  components:
+    -
+      uuid: 69d5d638-6be5-4e95-9166-1eea5aa7181e
+      component_id: sdc.starshot_demo.starshot-container
+      component_version: 34ace9d2183cf7a3
+      inputs: '{"design":"none","design_slot":"shadow","spacing":"small","constrain":true,"side_padding":true,"act_as_header":true,"modifier_class":"custom-class"}'
+    -
+      parent_uuid: 69d5d638-6be5-4e95-9166-1eea5aa7181e
+      slot: content
+      uuid: 5edfb10c-cd97-489a-9f0e-63badb99dc46
+      component_id: sdc.starshot_demo.starshot-grid
+      component_version: 8f5910267d0e7561
+      inputs: '{"vertical":"center","horizontal":"center","direction":"across","gap":"medium","wrap":"nowrap","last_to_end":true}'
+    -
+      parent_uuid: 5edfb10c-cd97-489a-9f0e-63badb99dc46
+      slot: content
+      uuid: e5f1b26c-b80c-459b-9a8f-3932c0b0065b
+      component_id: sdc.starshot_demo.drupal-logo
+      component_version: e5efd72a6b66be10
+      inputs: '{"variant":"Horizontal","color":"Drupal Navy","size":"Default"}'
+    -
+      parent_uuid: 5edfb10c-cd97-489a-9f0e-63badb99dc46
+      slot: content
+      uuid: cd16b251-1a72-4b19-881d-af4876d239e5
+      component_id: block.system_menu_block.starshot-demo-main
+      component_version: 8c99254be0279d6f
+      inputs: '{"label":"Starshot Demo Main Menu","label_display":"0","level":1,"depth":0,"expand_all_items":false}'
+    -
+      parent_uuid: 5edfb10c-cd97-489a-9f0e-63badb99dc46
+      slot: content
+      uuid: e85a6bdd-a1be-418e-889d-77be7adf266e
+      component_id: sdc.starshot_demo.starshot-button
+      component_version: 7d74cd7917f2c32f
+      inputs: '{"text":"Learn more","url":"https:\/\/drupal.org","display":"tertiary"}'
+    -
+      uuid: d2fe0c70-774e-4fb3-858c-b3001e908b3d
+      component_id: sdc.starshot_demo.starshot-hero
+      component_version: da62b5f0b27f8589
+      inputs: '{"title":"Create ambitious experiences that scale","design":"blue-stripe","image":{"target_id":"21"}}'
+    -
+      parent_uuid: d2fe0c70-774e-4fb3-858c-b3001e908b3d
+      slot: content
+      uuid: 82eab2db-0904-468d-8b2f-1a6aaa38e0f1
+      component_id: sdc.starshot_demo.starshot-paragraph
+      component_version: 5363de0b2bc83cdb
+      inputs: '{"theme":"dark","content":"Drupal is a fully composable CMS that allows you to design a digital experience around your vision.","display":"regular"}'
+    -
+      parent_uuid: d2fe0c70-774e-4fb3-858c-b3001e908b3d
+      slot: content
+      uuid: 06e0728a-9f48-4d10-9109-9946e3690fa6
+      component_id: sdc.starshot_demo.starshot-button
+      component_version: 7d74cd7917f2c32f
+      inputs: '{"text":"Learn more","url":"https:\/\/drupal.org","display":"primary"}'
+    -
+      uuid: 09382339-02c0-4e88-949c-4daa120da189
+      component_id: sdc.starshot_demo.starshot-container
+      component_version: 34ace9d2183cf7a3
+      inputs: '{"design":"none","design_slot":"none","spacing":"large","constrain":true,"side_padding":true}'
+    -
+      parent_uuid: 09382339-02c0-4e88-949c-4daa120da189
+      slot: content
+      uuid: 6c65a2b0-bae9-4b8c-b27e-15d4889846cb
+      component_id: sdc.starshot_demo.starshot-heading
+      component_version: 5a1001053e9d0f71
+      inputs: '{"theme":"light","content":"Flexible by design","level":2,"font":"heading","align":"left","margin":"large","modifier_class":"custom-class"}'
+    -
+      parent_uuid: 09382339-02c0-4e88-949c-4daa120da189
+      slot: content
+      uuid: 9b4ded6e-879e-4298-9713-f7f3722f89c8
+      component_id: sdc.starshot_demo.starshot-columns
+      component_version: dbfa841143b7e045
+      inputs: '{"cols":"four","gap":"medium","alignment":"none"}'
+    -
+      parent_uuid: 9b4ded6e-879e-4298-9713-f7f3722f89c8
+      slot: column_one
+      uuid: e6303515-8997-4260-a607-8a279fc85dbf
+      component_id: sdc.starshot_demo.starshot-testimonial-card
+      component_version: e2593e582ebc662b
+      inputs: '{"title":"User-centric experiences","summary":"Create compelling content on more  devices than ever. With tools to build versatile, structured content and integrate with a wide array of digital marketing channels.","image":{"target_id":"19"}}'
+    -
+      parent_uuid: 9b4ded6e-879e-4298-9713-f7f3722f89c8
+      slot: column_two
+      uuid: 632b358e-e8ab-42ff-8ea2-22108e9a1368
+      component_id: sdc.starshot_demo.starshot-testimonial-card
+      component_version: e2593e582ebc662b
+      inputs: '{"image":{"target_id":"5"},"title":"User-centric experiences","summary":"Create compelling content on more  devices than ever. With tools to build versatile, structured content and integrate with a wide array of digital marketing channels."}'
+    -
+      parent_uuid: 9b4ded6e-879e-4298-9713-f7f3722f89c8
+      slot: column_three
+      uuid: 35cbf063-7fd4-4e97-9202-52b4dd67c5f5
+      component_id: sdc.starshot_demo.starshot-testimonial-card
+      component_version: e2593e582ebc662b
+      inputs: '{"image":{"target_id":"12"},"title":"User-centric experiences","summary":"Create compelling content on more  devices than ever. With tools to build versatile, structured content and integrate with a wide array of digital marketing channels."}'
+    -
+      parent_uuid: 9b4ded6e-879e-4298-9713-f7f3722f89c8
+      slot: column_four
+      uuid: a732ab8a-f687-412e-bdef-fc5e43a0ee9f
+      component_id: sdc.starshot_demo.starshot-testimonial-card
+      component_version: e2593e582ebc662b
+      inputs: '{"image":{"target_id":"15"},"title":"User-centric experiences","summary":"Create compelling content on more  devices than ever. With tools to build versatile, structured content and integrate with a wide array of digital marketing channels."}'
+    -
+      parent_uuid: 09382339-02c0-4e88-949c-4daa120da189
+      slot: content
+      uuid: be16ba68-a1a1-4bc3-a701-4851c551e3db
+      component_id: sdc.starshot_demo.starshot-testimonial
+      component_version: cff1574eb27eec62
+      inputs: '{"quote":"For our 1000+ websites, one of the benefits of Drupal is that accessiblity compliance is already covered.","cite":"Joyce Peralta, Manager, Digital Communications at McGill University","image":{"target_id":"9"}}'
+    -
+      uuid: 591ca800-fe54-4760-a42a-ddfa496fffe2
+      component_id: sdc.starshot_demo.starshot-case-study
+      component_version: 8a41738892c82b13
+      inputs: '{"title":"Learn why 1 in 8 enterprise websites runs on Drupal","image":{"target_id":"18"}}'
+    -
+      parent_uuid: 591ca800-fe54-4760-a42a-ddfa496fffe2
+      slot: content
+      uuid: 54714f3d-8cab-4aa3-b819-ee4ed41eb97b
+      component_id: sdc.starshot_demo.starshot-grid
+      component_version: 8f5910267d0e7561
+      inputs: '{"vertical":"top","horizontal":"left","direction":"across","gap":"medium","wrap":"wrap"}'
+    -
+      parent_uuid: 54714f3d-8cab-4aa3-b819-ee4ed41eb97b
+      slot: content
+      uuid: 338dc96c-6e59-4bf7-8172-dd8dc7e0e921
+      component_id: sdc.starshot_demo.starshot-image
+      component_version: 315c9af54d4f92b8
+      inputs: '{"image":{"target_id":"7"}}'
+    -
+      parent_uuid: 54714f3d-8cab-4aa3-b819-ee4ed41eb97b
+      slot: content
+      uuid: d5651314-682f-44a8-a0ab-a4d629345502
+      component_id: sdc.starshot_demo.starshot-paragraph
+      component_version: 5363de0b2bc83cdb
+      inputs: '{"theme":"light","content":"Nestl\u00e9 leveraged Drupal to simplify, standardize, and centralize its global digital properties.","display":"regular"}'
+    -
+      parent_uuid: 591ca800-fe54-4760-a42a-ddfa496fffe2
+      slot: content
+      uuid: 045b8c66-d04b-4fee-81ba-5bcac07f187b
+      component_id: sdc.starshot_demo.starshot-statistic-card
+      component_version: 4fb32f2886bcca1c
+      inputs: '{"theme":"light","number":60,"suffix":"%","description":"of sites built with Drupal"}'
+    -
+      parent_uuid: 591ca800-fe54-4760-a42a-ddfa496fffe2
+      slot: content
+      uuid: 5597269a-141f-458f-8386-9fa06ff0c538
+      component_id: sdc.starshot_demo.starshot-statistic-card
+      component_version: 4fb32f2886bcca1c
+      inputs: '{"theme":"light","number":90,"description":"of sites built with Drupal"}'
+    -
+      parent_uuid: 591ca800-fe54-4760-a42a-ddfa496fffe2
+      slot: content
+      uuid: 0099ae13-1112-45fb-ab13-67c9b50e2fbd
+      component_id: sdc.starshot_demo.starshot-button
+      component_version: 7d74cd7917f2c32f
+      inputs: '{"text":"Learn more","url":"https:\/\/drupal.org","display":"primary"}'
+    -
+      uuid: 7184fba7-bb90-4c2e-9493-6387d9f55814
+      component_id: sdc.starshot_demo.starshot-container
+      component_version: 34ace9d2183cf7a3
+      inputs: '{"design":"light","design_slot":"none","spacing":"large","constrain":true,"side_padding":true,"act_as_header":true}'
+    -
+      parent_uuid: 7184fba7-bb90-4c2e-9493-6387d9f55814
+      slot: content
+      uuid: 78b21502-2e1b-4a27-b05b-f73d5fb62aac
+      component_id: sdc.starshot_demo.starshot-cta
+      component_version: 6da33a7cc9e8c7d2
+      inputs: '{"title":"Start your \u003Cem\u003EDrupal\u003C\/em\u003E journey"}'
+    -
+      parent_uuid: 78b21502-2e1b-4a27-b05b-f73d5fb62aac
+      slot: cta_content
+      uuid: a6e5013f-4fb7-4ffc-a5de-f0d1120f27fd
+      component_id: sdc.starshot_demo.starshot-paragraph
+      component_version: 5363de0b2bc83cdb
+      inputs: '{"theme":"light","content":"Get your website up and running faster.\u003Cbr\u003E\n\u003Cstrong\u003EDrupal CMS\u003C\/strong\u003E gives you the tools to bring your digital\nambitions to life without restricting your creativity.","display":"regular"}'
+    -
+      parent_uuid: 78b21502-2e1b-4a27-b05b-f73d5fb62aac
+      slot: cta_content
+      uuid: ab832df1-3d66-42fa-8e01-f77838d0cfb0
+      component_id: sdc.starshot_demo.starshot-grid
+      component_version: 8f5910267d0e7561
+      inputs: '{"vertical":"center","horizontal":"left","direction":"across","gap":"medium","wrap":"wrap","modifier_class":"custom-class"}'
+    -
+      parent_uuid: ab832df1-3d66-42fa-8e01-f77838d0cfb0
+      slot: content
+      uuid: adb8644d-614c-4ceb-8729-2110e7f261d5
+      component_id: sdc.starshot_demo.starshot-button
+      component_version: 7d74cd7917f2c32f
+      inputs: '{"text":"Get Started","url":"https:\/\/drupal.org","display":"secondary"}'
+    -
+      parent_uuid: ab832df1-3d66-42fa-8e01-f77838d0cfb0
+      slot: content
+      uuid: b97dcc71-1b5e-4fdc-b1b8-7dd43b1f1f82
+      component_id: sdc.starshot_demo.starshot-button
+      component_version: 7d74cd7917f2c32f
+      inputs: '{"text":"Learn more about Drupal CMS","url":"https:\/\/drupal.org","display":"link"}'
+    -
+      parent_uuid: 78b21502-2e1b-4a27-b05b-f73d5fb62aac
+      slot: cta_content
+      uuid: 4c0ba9f3-c996-473a-890d-df88b119e188
+      component_id: sdc.starshot_demo.starshot-paragraph
+      component_version: 5363de0b2bc83cdb
+      inputs: '{"theme":"light","content":"Drupal Core provides the base features you rely on and\nallows you to start building from scratch.","display":"regular"}'
+    -
+      parent_uuid: 78b21502-2e1b-4a27-b05b-f73d5fb62aac
+      slot: cta_content
+      uuid: 9ad0ba84-9621-4817-ad38-244538a734b7
+      component_id: sdc.starshot_demo.starshot-button
+      component_version: 7d74cd7917f2c32f
+      inputs: '{"text":"Download Drupal Core","url":"https:\/\/drupal.org","display":"link"}'
+    -
+      uuid: 3e61eff4-3e84-4bd6-bc0b-3c3feabc95b1
+      component_id: sdc.starshot_demo.starshot-container
+      component_version: 34ace9d2183cf7a3
+      inputs: '{"design":"blue","design_slot":"none","spacing":"large","act_as_header":true,"modifier_class":"custom-class"}'
+    -
+      parent_uuid: 3e61eff4-3e84-4bd6-bc0b-3c3feabc95b1
+      slot: content
+      uuid: c3544689-5dde-4758-8491-f0c8f0c57aa7
+      component_id: sdc.starshot_demo.starshot-container
+      component_version: 34ace9d2183cf7a3
+      inputs: '{"design":"none","design_slot":"none","spacing":"small","modifier_class":"custom-class"}'
+    -
+      parent_uuid: c3544689-5dde-4758-8491-f0c8f0c57aa7
+      slot: content
+      uuid: 4a89708a-db90-42a1-a36b-07f90de6ef3b
+      component_id: sdc.starshot_demo.starshot-heading
+      component_version: 5a1001053e9d0f71
+      inputs: '{"theme":"light","content":"Explore \u0026 Learn","level":2,"font":"heading","align":"left","margin":"medium"}'
+    -
+      parent_uuid: c3544689-5dde-4758-8491-f0c8f0c57aa7
+      slot: content
+      uuid: 14e6b0c5-e605-4ccc-8946-f251f4b72d84
+      component_id: sdc.starshot_demo.starshot-grid
+      component_version: 8f5910267d0e7561
+      inputs: '{"vertical":"center","horizontal":"left","direction":"across","gap":"small","wrap":"wrap","last_to_end":true,"modifier_class":"custom-class"}'
+    -
+      parent_uuid: 14e6b0c5-e605-4ccc-8946-f251f4b72d84
+      slot: content
+      uuid: 3cd613cc-29c3-4c9c-92ef-7c2dc1666490
+      component_id: sdc.starshot_demo.starshot-paragraph
+      component_version: 5363de0b2bc83cdb
+      inputs: '{"theme":"light","content":"Easily create the digital experiences you want with Drupal.","display":"strong"}'
+    -
+      parent_uuid: 14e6b0c5-e605-4ccc-8946-f251f4b72d84
+      slot: content
+      uuid: c5330360-5b06-482e-89bf-18fdb8d91b65
+      component_id: block.system_menu_block.starshot-demo-about
+      component_version: 4698e4d3065c399b
+      inputs: '{"level":"1","depth":"1","expand_all_items":true,"label":"Starshot Demo About Menu","label_display":"0"}'
+    -
+      parent_uuid: 3e61eff4-3e84-4bd6-bc0b-3c3feabc95b1
+      slot: content
+      uuid: 8c45c2a5-b580-48e3-a78a-e023797c40ee
+      component_id: sdc.starshot_demo.starshot-slider
+      component_version: 827dbff41dbd8333
+      inputs: '{"slide_count":4}'
+    -
+      parent_uuid: 8c45c2a5-b580-48e3-a78a-e023797c40ee
+      slot: slide_one
+      uuid: 75737219-caf5-4b79-9105-b7d29c9dc8cd
+      component_id: sdc.starshot_demo.starshot-slide-card
+      component_version: b9f9be909c68657d
+      inputs: '{"title":"Blog Title Ut aliquip nulla et","url":"https:\/\/drupal.org","color":"green","image":{"target_id":"27"}}'
+    -
+      parent_uuid: 8c45c2a5-b580-48e3-a78a-e023797c40ee
+      slot: slide_two
+      uuid: 0600f966-5bba-467b-b514-0a7755ff820f
+      component_id: sdc.starshot_demo.starshot-slide-card
+      component_version: b9f9be909c68657d
+      inputs: '{"title":"Blog Title Nostrud aliqua","url":"https:\/\/drupal.org","color":"green","image":{"target_id":"22"}}'
+    -
+      parent_uuid: 8c45c2a5-b580-48e3-a78a-e023797c40ee
+      slot: slide_three
+      uuid: 51accd8d-a1c8-4c42-b269-b2f8ce124a45
+      component_id: sdc.starshot_demo.starshot-slide-card
+      component_version: b9f9be909c68657d
+      inputs: '{"title":"Blog Title Dolore excepteur qui","url":"https:\/\/drupal.org","color":"green","image":{"target_id":"13"}}'
+    -
+      parent_uuid: 8c45c2a5-b580-48e3-a78a-e023797c40ee
+      slot: slide_four
+      uuid: a67ea104-d719-4cba-8539-a3949c3b66b5
+      component_id: sdc.starshot_demo.starshot-slide-card
+      component_version: b9f9be909c68657d
+      inputs: '{"title":"Blog Title Aliqua et veniam pariatur ut","url":"https:\/\/drupal.org","color":"red","image":{"target_id":"16"}}'
+    -
+      uuid: 07a2270a-3fce-40b2-b2e5-6e7f886c5dfb
+      component_id: sdc.starshot_demo.starshot-cta
+      component_version: 6da33a7cc9e8c7d2
+      inputs: '{"title":"A big thank you to our \u003Cem\u003Econtributors\u003C\/em\u003E"}'
+    -
+      parent_uuid: 07a2270a-3fce-40b2-b2e5-6e7f886c5dfb
+      slot: cta_content
+      uuid: 58de0bbc-9224-4a5b-9851-da108ec5735d
+      component_id: sdc.starshot_demo.starshot-grid
+      component_version: 8f5910267d0e7561
+      inputs: '{"vertical":"center","horizontal":"center","direction":"down","gap":"medium","wrap":"wrap"}'
+    -
+      parent_uuid: 58de0bbc-9224-4a5b-9851-da108ec5735d
+      slot: content
+      uuid: e87dcb77-a3be-4684-8a04-a3f247790fab
+      component_id: sdc.starshot_demo.starshot-heading
+      component_version: 5a1001053e9d0f71
+      inputs: '{"theme":"light","content":"Leading organizations","level":2,"font":"heading","align":"left","modifier_class":"ct-starshot-heading--font-heading-4"}'
+    -
+      parent_uuid: 58de0bbc-9224-4a5b-9851-da108ec5735d
+      slot: content
+      uuid: 17056088-3492-49c8-9b3b-a9b254aff32d
+      component_id: sdc.starshot_demo.starshot-image
+      component_version: 315c9af54d4f92b8
+      inputs: '{"image":{"target_id":"10"}}'
+    -
+      parent_uuid: 58de0bbc-9224-4a5b-9851-da108ec5735d
+      slot: content
+      uuid: cb750f59-687d-4b62-ae58-f7096908bf1c
+      component_id: sdc.starshot_demo.starshot-heading
+      component_version: 5a1001053e9d0f71
+      inputs: '{"theme":"light","content":"Supporting organizations","level":2,"font":"heading","align":"left","modifier_class":"ct-starshot-heading--font-heading-4"}'
+    -
+      parent_uuid: 58de0bbc-9224-4a5b-9851-da108ec5735d
+      slot: content
+      uuid: e7517415-42bb-422e-8180-aefc04809737
+      component_id: sdc.starshot_demo.starshot-image
+      component_version: 315c9af54d4f92b8
+      inputs: '{"image":{"target_id":"26"}}'
+    -
+      parent_uuid: 07a2270a-3fce-40b2-b2e5-6e7f886c5dfb
+      slot: cta_content
+      uuid: e6f4b957-6133-473f-b667-7f57a5fa81cc
+      component_id: sdc.starshot_demo.starshot-heading
+      component_version: 5a1001053e9d0f71
+      inputs: '{"theme":"light","content":"And many other contributors from the community","level":2,"font":"heading","align":"left","modifier_class":"ct-starshot-heading--font-heading-6"}'
+    -
+      uuid: e7e3d59a-a3c2-4b43-9d89-e0cead070895
+      component_id: sdc.starshot_demo.starshot-container
+      component_version: 34ace9d2183cf7a3
+      inputs: '{"design":"green","design_slot":"none","spacing":"large","constrain":true,"side_padding":true,"image":{"target_id":"2"}}'
+    -
+      parent_uuid: e7e3d59a-a3c2-4b43-9d89-e0cead070895
+      slot: content
+      uuid: a52780ba-03fe-4dc4-adf1-5a47dde18b4a
+      component_id: sdc.starshot_demo.starshot-heading
+      component_version: 5a1001053e9d0f71
+      inputs: '{"theme":"dark","content":"Open source means no vendor lock-in","level":2,"font":"heading","align":"left","margin":"large","modifier_class":"ct-starshot-heading--font-heading-2"}'
+    -
+      parent_uuid: e7e3d59a-a3c2-4b43-9d89-e0cead070895
+      slot: content
+      uuid: c492d3b3-cd6c-41cb-8e18-dbfb8c33b39f
+      component_id: sdc.starshot_demo.starshot-columns
+      component_version: dbfa841143b7e045
+      inputs: '{"cols":"four","gap":"large"}'
+    -
+      parent_uuid: c492d3b3-cd6c-41cb-8e18-dbfb8c33b39f
+      slot: column_one
+      uuid: e65dd788-a6db-4809-a36a-f8d1c1c04be8
+      component_id: sdc.starshot_demo.starshot-statistic-card
+      component_version: 4fb32f2886bcca1c
+      inputs: '{"theme":"dark","number":100,"suffix":"+","description":"Drupal Certified Partners provide global support"}'
+    -
+      parent_uuid: c492d3b3-cd6c-41cb-8e18-dbfb8c33b39f
+      slot: column_two
+      uuid: 06ddb2eb-54a9-416b-8b3b-29f2cd169c43
+      component_id: sdc.starshot_demo.starshot-statistic-card
+      component_version: 4fb32f2886bcca1c
+      inputs: '{"theme":"dark","number":10,"suffix":"K+","description":"Support base of Drupal professionals"}'
+    -
+      parent_uuid: c492d3b3-cd6c-41cb-8e18-dbfb8c33b39f
+      slot: column_three
+      uuid: c751c2d9-402e-4f6d-9663-a35fd5020ceb
+      component_id: sdc.starshot_demo.starshot-statistic-card
+      component_version: 4fb32f2886bcca1c
+      inputs: '{"theme":"dark","number":50,"suffix":"%","description":"Half of Fortune 500 companies use Drupal"}'
+    -
+      parent_uuid: c492d3b3-cd6c-41cb-8e18-dbfb8c33b39f
+      slot: column_four
+      uuid: 0b166d7f-308a-4e6b-8992-f7d909c54eda
+      component_id: sdc.starshot_demo.starshot-statistic-card
+      component_version: 4fb32f2886bcca1c
+      inputs: '{"theme":"dark","number":500,"suffix":"K+","description":"Websites currently use Drupal"}'
+    -
+      uuid: ea394457-2bd3-4957-9dd7-72cebd279ea8
+      component_id: sdc.starshot_demo.starshot-grid
+      component_version: 8f5910267d0e7561
+      inputs: '{"vertical":"stretch","horizontal":"left","direction":"across","wrap":"wrap"}'
+    -
+      parent_uuid: ea394457-2bd3-4957-9dd7-72cebd279ea8
+      slot: content
+      uuid: 7e0b8d96-4333-4c56-9db6-93a81abdcc10
+      component_id: sdc.starshot_demo.starshot-container
+      component_version: 34ace9d2183cf7a3
+      inputs: '{"design":"navy","design_slot":"none","spacing":"large"}'
+    -
+      parent_uuid: 7e0b8d96-4333-4c56-9db6-93a81abdcc10
+      slot: content
+      uuid: db12ae86-4f3c-4a37-b800-dca7f07eef66
+      component_id: sdc.starshot_demo.starshot-grid
+      component_version: 8f5910267d0e7561
+      inputs: '{"vertical":"stretch","horizontal":"stretch","direction":"across","gap":"medium","wrap":"wrap"}'
+    -
+      parent_uuid: db12ae86-4f3c-4a37-b800-dca7f07eef66
+      slot: content
+      uuid: 028d8ac4-94c0-4f44-af3e-482622b77e03
+      component_id: sdc.starshot_demo.drupal-logo
+      component_version: e5efd72a6b66be10
+      inputs: '{"variant":"Horizontal","color":"Drupal Blue","size":"Default"}'
+    -
+      parent_uuid: db12ae86-4f3c-4a37-b800-dca7f07eef66
+      slot: content
+      uuid: 80c925e5-9333-4130-b720-b9fc7edb5a24
+      component_id: block.system_menu_block.starshot-demo-about
+      component_version: 4698e4d3065c399b
+      inputs: '{"label":"Starshot Demo About Menu","label_display":"0","level":1,"depth":0,"expand_all_items":false}'
+    -
+      parent_uuid: db12ae86-4f3c-4a37-b800-dca7f07eef66
+      slot: content
+      uuid: f995b7ba-bafd-44c0-b546-c49fbbf4d0ee
+      component_id: block.system_menu_block.starshot-demo-main
+      component_version: 8c99254be0279d6f
+      inputs: '{"label":"Starshot Demo Main Menu","label_display":"0","level":1,"depth":0,"expand_all_items":false}'
+    -
+      parent_uuid: ea394457-2bd3-4957-9dd7-72cebd279ea8
+      slot: content
+      uuid: ac6af42f-eaa0-4d18-9939-c9a049599202
+      component_id: sdc.starshot_demo.starshot-container
+      component_version: 34ace9d2183cf7a3
+      inputs: '{"design":"gradient","design_slot":"none","spacing":"large"}'
+    -
+      parent_uuid: ac6af42f-eaa0-4d18-9939-c9a049599202
+      slot: content
+      uuid: 0a7ffbe1-ade2-49fa-84c1-06330ab66ee9
+      component_id: sdc.starshot_demo.starshot-social-media
+      component_version: 906e42d38b4e7ef6
+      inputs: '{"hover_animation":"scale"}'
+    -
+      parent_uuid: 0a7ffbe1-ade2-49fa-84c1-06330ab66ee9
+      slot: social_media_icons
+      uuid: b8f6dd8c-0ffc-4539-b6fb-1361c749fb1f
+      component_id: sdc.starshot_demo.starshot-social-media-icon
+      component_version: 0285d232f60026cf
+      inputs: '{"name":"youtube","url":{"uri":"https:\/\/www.youtube.com\/drupalassociation","options":[]}}'
+    -
+      parent_uuid: 0a7ffbe1-ade2-49fa-84c1-06330ab66ee9
+      slot: social_media_icons
+      uuid: cc3ee4e2-9dff-44e1-9c2d-a31cc139afa1
+      component_id: sdc.starshot_demo.starshot-social-media-icon
+      component_version: 0285d232f60026cf
+      inputs: '{"name":"x","url":{"uri":"http:\/\/x.com\/drupal","options":[]}}'
+    -
+      parent_uuid: 0a7ffbe1-ade2-49fa-84c1-06330ab66ee9
+      slot: social_media_icons
+      uuid: 78718402-1787-498c-b5ee-3a92cc9a074d
+      component_id: sdc.starshot_demo.starshot-social-media-icon
+      component_version: 0285d232f60026cf
+      inputs: '{"name":"youtube","url":{"uri":"https:\/\/mastodon.social\/@drupal","options":[]}}'
+    -
+      parent_uuid: 0a7ffbe1-ade2-49fa-84c1-06330ab66ee9
+      slot: social_media_icons
+      uuid: f142e5c1-b4bf-4536-95bc-642aa9625313
+      component_id: sdc.starshot_demo.starshot-social-media-icon
+      component_version: 0285d232f60026cf
+      inputs: '{"name":"linkedin","url":{"uri":"https:\/\/www.linkedin.com\/company\/drupal-project\/","options":[]}}'
+    -
+      parent_uuid: 0a7ffbe1-ade2-49fa-84c1-06330ab66ee9
+      slot: social_media_icons
+      uuid: 59dbad48-0c0d-48c1-af8d-904ba2deaa2a
+      component_id: sdc.starshot_demo.starshot-social-media-icon
+      component_version: 0285d232f60026cf
+      inputs: '{"name":"facebook","url":{"uri":"https:\/\/www.facebook.com\/DrupalOpenSource\/","options":[]}}'
+    -
+      parent_uuid: 0a7ffbe1-ade2-49fa-84c1-06330ab66ee9
+      slot: social_media_icons
+      uuid: 5fff89f7-74a3-430a-b754-ae237b8d98ce
+      component_id: sdc.starshot_demo.starshot-social-media-icon
+      component_version: 0285d232f60026cf
+      inputs: '{"name":"youtube","url":{"uri":"https:\/\/www.youtube.com\/drupalassociation","options":[]}}'
+    -
+      uuid: d294d9d6-7490-4885-b3ff-a76c38dc45fa
+      component_id: sdc.starshot_demo.starshot-container
+      component_version: 34ace9d2183cf7a3
+      inputs: '{"design":"blue","design_slot":"none","spacing":"small","constrain":true,"side_padding":true,"modifier_class":"custom-class"}'
+    -
+      parent_uuid: d294d9d6-7490-4885-b3ff-a76c38dc45fa
+      slot: content
+      uuid: e2136bcc-3c8b-4ca9-9b6f-b5b27caccf2a
+      component_id: sdc.starshot_demo.starshot-columns
+      component_version: dbfa841143b7e045
+      inputs: '{"cols":"two","gap":"medium","alignment":"right-on-last"}'
+    -
+      parent_uuid: e2136bcc-3c8b-4ca9-9b6f-b5b27caccf2a
+      slot: column_one
+      uuid: 3de9d25f-a5e6-4439-b007-bb9b9a3e431b
+      component_id: block.block_content.0c817299-9495-4232-a8f6-bd2f44adf8be
+      component_version: bd504e3497655816
+      inputs: '{"label":"About Starshot Demo","label_display":"0","status":true,"info":"","view_mode":"full"}'
+    -
+      parent_uuid: e2136bcc-3c8b-4ca9-9b6f-b5b27caccf2a
+      slot: column_two
+      uuid: c346543a-f0f2-41f5-8289-9fa0d0dd5dca
+      component_id: block.block_content.cdab91da-6c91-4cad-9f49-957bc9ebae4a
+      component_version: b855b6e284e7be79
+      inputs: '{"label":"Trademark","label_display":"0","status":true,"info":"","view_mode":"full"}'
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 1
+  created:
+    -
+      value: 1741713514
+  revision_translation_affected:
+    -
+      value: true
