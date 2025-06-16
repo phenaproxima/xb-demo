@@ -15,6 +15,7 @@ forms: []
 recipes:
   required:
     - drupal/xb_demo
+    - drupal/xb_page
 
 # Explicitly provide an empty list of themes -- this prevents the installer from
 # injecting Stark into it.

@@ -9,7 +9,6 @@ use Drupal\Core\Extension\ModuleInstallerInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Site\Settings;
 use Drupal\dashboard\Entity\Dashboard;
-use Drupal\experience_builder\Entity\Page;
 use Drupal\RecipeKit\Installer\Hooks;
 use Drupal\RecipeKit\Installer\Messenger;
 
@@ -20,7 +19,6 @@ function drupal_cms_installer_install_tasks(): array {
   $tasks = [
     'xb_demo_alter_welcome_links' => [],
     'xb_demo_uninstall_unnecessary_modules' => [],
-    'xb_demo_create_page' => [],
   ] + Hooks::installTasks();
 
   if (getenv('IS_DDEV_PROJECT')) {
@@ -94,32 +92,4 @@ function xb_demo_uninstall_unnecessary_modules(): void {
   \Drupal::service(ModuleInstallerInterface::class)->uninstall([
     'gin_toolbar',
   ]);
-}
-
-function xb_demo_create_page(): void {
-  // Ensure XB has the most up-to-date list of components.
-  \Drupal::moduleHandler()->invoke('experience_builder', 'rebuild');
-
-  $data = require_once __DIR__ . '/xb-page.php';
-
-  /** @var \Drupal\Core\Entity\EntityRepositoryInterface $entity_repository */
-  $entity_repository = \Drupal::service(EntityRepositoryInterface::class);
-
-  $inputs = json_decode($data['components'][0]['inputs'], TRUE, flags: JSON_THROW_ON_ERROR);
-  foreach ($inputs as &$input) {
-    if (empty($input['image']['value']['target_id'])) {
-      continue;
-    }
-    $target_id = $input['image']['value']['target_id'];
-    // We don't know the media item's UUID, only its serial ID.
-    if (is_numeric($target_id)) {
-      continue;
-    }
-    $media_id = $entity_repository->loadEntityByUuid('media', $target_id)?->id();
-    if ($media_id) {
-      $input['image']['value']['target_id'] = (int) $media_id;
-    }
-  }
-  $data['components'][0]['inputs'] = json_encode($inputs, JSON_UNESCAPED_SLASHES);
-  Page::create($data)->save();
 }
