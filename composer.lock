@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "27c1ed1b391c1257e736982c05fc3b48",
+    "content-hash": "bd19ee2bd190946f23d6e1b7031b5cf4",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2649,17 +2649,17 @@
         },
         {
             "name": "drupal/experience_builder",
-            "version": "0.3.0-alpha1",
+            "version": "0.4.0-alpha1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/experience_builder.git",
-                "reference": "0.3.0-alpha1"
+                "reference": "0.4.0-alpha1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/experience_builder-0.3.0-alpha1.zip",
-                "reference": "0.3.0-alpha1",
-                "shasum": "49096d1e111d47f69bfadfe5506e909f019930c5"
+                "url": "https://ftp.drupal.org/files/projects/experience_builder-0.4.0-alpha1.zip",
+                "reference": "0.4.0-alpha1",
+                "shasum": "a663c7e6c9f575122c56362d5a737ef9971d4e37"
             },
             "require": {
                 "drupal/core": "^11.1.2",
@@ -2670,6 +2670,7 @@
             "require-dev": {
                 "devizzent/cebe-php-openapi": "^1.0.3",
                 "drupal/metatag": "^2.1",
+                "drupal/simple_oauth": "^6",
                 "jangregor/phpstan-prophecy": "^1.0.2",
                 "league/openapi-psr7-validator": "^0.22.0",
                 "webflo/drupal-finder": "^1.3.1"
@@ -2677,8 +2678,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "0.3.0-alpha1",
-                    "datestamp": "1747232466",
+                    "version": "0.4.0-alpha1",
+                    "datestamp": "1749856692",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -3958,6 +3959,19 @@
                 "type": "path",
                 "url": "recipes/xb_demo",
                 "reference": "1582d51c8963cccedbc9ccb4b3254446c4ba98c0"
+            },
+            "type": "drupal-recipe",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "drupal/xb_page",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "recipes/xb_page",
+                "reference": "cd00ad1caee831624a2a51e85099f7aa08601ba3"
             },
             "type": "drupal-recipe",
             "transport-options": {
@@ -9057,11 +9071,12 @@
         "drupal/default_content": 15,
         "drupal/experience_builder": 15,
         "drupal/recipe_installer_kit": 15,
-        "drupal/xb_demo": 20
+        "drupal/xb_demo": 20,
+        "drupal/xb_page": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
+    "platform": {},
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }
