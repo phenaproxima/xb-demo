@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bd19ee2bd190946f23d6e1b7031b5cf4",
+    "content-hash": "480cc43d97fe0417ca12cecc30d3d477",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2649,37 +2649,39 @@
         },
         {
             "name": "drupal/experience_builder",
-            "version": "0.4.0-alpha1",
+            "version": "0.5.0-alpha1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/experience_builder.git",
-                "reference": "0.4.0-alpha1"
+                "reference": "0.5.0-alpha1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/experience_builder-0.4.0-alpha1.zip",
-                "reference": "0.4.0-alpha1",
-                "shasum": "a663c7e6c9f575122c56362d5a737ef9971d4e37"
+                "url": "https://ftp.drupal.org/files/projects/experience_builder-0.5.0-alpha1.zip",
+                "reference": "0.5.0-alpha1",
+                "shasum": "e02d0117c133acf947b02dbe80a487cd727200a7"
             },
             "require": {
-                "drupal/core": "^11.1.2",
+                "drupal/core": "^11.2",
                 "justinrainbow/json-schema": "^5.2",
                 "php": ">=8.3",
                 "twig/twig": "^3.16"
             },
             "require-dev": {
                 "devizzent/cebe-php-openapi": "^1.0.3",
+                "drupal/ai": "^1.1",
+                "drupal/ai_agents": "^1.1",
                 "drupal/metatag": "^2.1",
                 "drupal/simple_oauth": "^6",
-                "jangregor/phpstan-prophecy": "^1.0.2",
+                "jangregor/phpstan-prophecy": "~1|~2",
                 "league/openapi-psr7-validator": "^0.22.0",
                 "webflo/drupal-finder": "^1.3.1"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "0.4.0-alpha1",
-                    "datestamp": "1749856692",
+                    "version": "0.5.0-alpha1",
+                    "datestamp": "1751657793",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
