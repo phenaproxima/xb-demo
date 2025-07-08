@@ -25,7 +25,7 @@ Instead, in a terminal with DDEV installed, run the following commands to spin i
 mkdir xb-demo
 cd xb-demo
 ddev config --project-type=drupal11 --docroot=web
-ddev composer create phenaproxima/xb-demo --stability=dev
+ddev composer create-project phenaproxima/xb-demo --stability=dev
 ddev launch
 ```
 You don't _have_ to use DDEV; any tech stack that supports Drupal should work just fine.
