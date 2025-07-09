@@ -50,7 +50,7 @@ default:
     -
       uuid: d2fe0c70-774e-4fb3-858c-b3001e908b3d
       component_id: sdc.starshot_demo.starshot-hero
-      component_version: a325b780ab3ffd23
+      component_version: d7d88e9c47220c74
       inputs: '{"title":"Create ambitious experiences that scale","design":"blue-stripe","image":{"target_id":"21"}}'
     -
       parent_uuid: d2fe0c70-774e-4fb3-858c-b3001e908b3d

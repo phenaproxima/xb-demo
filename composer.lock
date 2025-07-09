@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "31659476f24851db129d5a0bbc7934c1",
+    "content-hash": "405f7a92e364965ed27c39f101649ce2",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2204,21 +2204,22 @@
         },
         {
             "name": "drupal/demo_design_system",
-            "version": "1.0.1",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/demo_design_system.git",
-                "reference": "1.0.1"
+                "reference": "1.0.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/demo_design_system-1.0.1.zip",
-                "reference": "1.0.1",
-                "shasum": "c94fe11ab031fc95267fc10e184b010a0fb55197"
+                "url": "https://ftp.drupal.org/files/projects/demo_design_system-1.0.4.zip",
+                "reference": "1.0.4",
+                "shasum": "87765be00481b1e34edb1a193a4cc7bfba66f20e"
             },
             "require": {
                 "drupal/components": "^3@beta",
                 "drupal/core": "^10 || ^11",
+                "drupal/default_content": "^2",
                 "php": ">=8.2"
             },
             "require-dev": {
@@ -2232,8 +2233,8 @@
             "type": "drupal-theme",
             "extra": {
                 "drupal": {
-                    "version": "1.0.1",
-                    "datestamp": "1742597640",
+                    "version": "1.0.4",
+                    "datestamp": "1751992092",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2266,7 +2267,7 @@
                     "homepage": "https://www.drupal.org/user/3193139"
                 }
             ],
-            "description": "CivicTheme is a Drupal 10 component-based theme.",
+            "description": "The Starshot Demo Design System for Experience Builder.",
             "homepage": "https://github.com/civictheme/civictheme",
             "support": {
                 "source": "https://github.com/civictheme/monorepo-drupal",
@@ -3220,17 +3221,17 @@
         },
         {
             "name": "drupal/linkit",
-            "version": "7.0.5",
+            "version": "7.0.6",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/linkit.git",
-                "reference": "7.0.5"
+                "reference": "7.0.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/linkit-7.0.5.zip",
-                "reference": "7.0.5",
-                "shasum": "58baf9f76c46c73e02639ac79857889c52c46113"
+                "url": "https://ftp.drupal.org/files/projects/linkit-7.0.6.zip",
+                "reference": "7.0.6",
+                "shasum": "72a809e45a5f2cbc8919af3e9e854ae95f324200"
             },
             "require": {
                 "drupal/core": "^10.1 || ^11"
@@ -3242,8 +3243,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "7.0.5",
-                    "datestamp": "1750458295",
+                    "version": "7.0.6",
+                    "datestamp": "1751987441",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4749,16 +4750,16 @@
         },
         {
             "name": "laravel/prompts",
-            "version": "v0.3.5",
+            "version": "v0.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/prompts.git",
-                "reference": "57b8f7efe40333cdb925700891c7d7465325d3b1"
+                "reference": "86a8b692e8661d0fb308cec64f3d176821323077"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/prompts/zipball/57b8f7efe40333cdb925700891c7d7465325d3b1",
-                "reference": "57b8f7efe40333cdb925700891c7d7465325d3b1",
+                "url": "https://api.github.com/repos/laravel/prompts/zipball/86a8b692e8661d0fb308cec64f3d176821323077",
+                "reference": "86a8b692e8661d0fb308cec64f3d176821323077",
                 "shasum": ""
             },
             "require": {
@@ -4802,9 +4803,9 @@
             "description": "Add beautiful and user-friendly forms to your command-line applications.",
             "support": {
                 "issues": "https://github.com/laravel/prompts/issues",
-                "source": "https://github.com/laravel/prompts/tree/v0.3.5"
+                "source": "https://github.com/laravel/prompts/tree/v0.3.6"
             },
-            "time": "2025-02-11T13:34:40+00:00"
+            "time": "2025-07-07T14:17:42+00:00"
         },
         {
             "name": "league/container",
