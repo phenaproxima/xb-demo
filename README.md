@@ -16,7 +16,7 @@ There is no update path yet; data loss is possible. Additionally, this demo proj
 
 ## Getting Started with the Demo 🚀
 
-We strongly recommend using [DDEV](https://ddev.com/get-started/) (version 1.24.0 or later) to run this project, since it includes everything you'll need.
+We strongly recommend using [DDEV](https://ddev.com/get-started/) (version 1.24.2 or later) to run this project, since it includes everything you'll need.
 
 Cloning the repository locally is not required!
 
