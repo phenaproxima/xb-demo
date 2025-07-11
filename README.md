@@ -26,7 +26,7 @@ mkdir xb-demo
 cd xb-demo
 ddev config --project-type=drupal11 --docroot=web
 ddev composer create-project phenaproxima/xb-demo --stability=dev
-# If you are using DDEV v1.24.1 or older, run this instead:
+# For DDEV v1.24.1 or older, upgrade DDEV or run this instead:
 # ddev composer create phenaproxima/xb-demo --stability=dev
 ddev launch
 ```
