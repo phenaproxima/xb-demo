@@ -90,6 +90,8 @@ function xb_demo_alter_welcome_links(): void {
 
 function xb_demo_uninstall_unnecessary_modules(): void {
   \Drupal::service(ModuleInstallerInterface::class)->uninstall([
-    'gin_toolbar',
+    'gin_toolbar'//,
+    // Remove this as it is distracting in XB and not supported by the demo theme.
+    //'contextual'
   ]);
 }

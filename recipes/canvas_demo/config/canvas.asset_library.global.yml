@@ -3,7 +3,7 @@ status: true
 dependencies:
   enforced:
     module:
-      - experience_builder
+      - canvas
 id: global
 label: 'Global CSS'
 css:

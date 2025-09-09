@@ -2,13 +2,13 @@ langcode: en
 status: false
 dependencies:
   config:
-    - filter.format.xb_html_block
+    - filter.format.canvas_html_block
   module:
     - ckeditor5
   enforced:
     module:
-      - experience_builder
-format: xb_html_block
+      - canvas
+format: canvas_html_block
 editor: ckeditor5
 settings:
   toolbar:

@@ -1,6 +1,6 @@
-name: Experience Builder Demo
+name: Canvas Demo
 type: Demo
-description: A demonstration of the next-generation Experience Builder for Drupal.
+description: A demonstration of Drupal Canvas.
 recipes:
   - core/recipes/administrator_role
   - core/recipes/core_recommended_maintenance
@@ -14,8 +14,9 @@ recipes:
 install:
   - block
   - metatag
-  - experience_builder
-  - xb_stark
+  - webform
+  - canvas
+  - canvas_stark
   - gin
   - starshot_demo
   - automated_cron
@@ -36,24 +37,21 @@ install:
 config:
   strict: false
   import:
-    experience_builder: '*'
+    canvas: '*'
     image:
       - image.style.large
       - image.style.thumbnail
     starshot_demo: '*'
     metatag: '*'
+    webform: '*'
     user:
       # This view mode is only needed because Olivero expects it to exist
       # in certain situations.
       - core.entity_view_mode.user.compact
       - views.view.user_admin_people
   actions:
-    # Disable all components XB generated during installation. Some components
-    # have two- or three-part identifiers, so we need to disable those
-    # separately.
-    experience_builder.component.*.*:
-      disable: []
-    experience_builder.component.*.*.*:
+    # Disable all components Canvas generated during installation.
+    canvas.component.sdc.canvas.*:
       disable: []
     gin.settings:
       simpleConfigUpdate:

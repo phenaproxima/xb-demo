@@ -10,12 +10,12 @@ props:
     title: Title
     type: string
     examples:
-      - 'Experience Builder'
+      - 'Canvas'
   link:
     title: Link
     type: string
     examples:
-      - 'https://drupal.org/project/experience_builder'
+      - 'https://drupal.org/project/canvas'
     format: uri
   status:
     title: Status

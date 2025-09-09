@@ -1,6 +1,6 @@
 {
     "name": "phenaproxima/xb-demo",
-    "description": "A pre-alpha demo of Experience Builder running on top of Drupal CMS.",
+    "description": "A pre-alpha demo of Drupal Canvas running on top of Drupal CMS.",
     "type": "project",
     "license": "GPL-2.0-or-later",
     "repositories": {
@@ -8,38 +8,38 @@
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         },
-        "xb_demo": {
+        "canvas_demo": {
             "type": "path",
-            "url": "recipes/xb_demo"
+            "url": "recipes/canvas_demo"
         },
-        "xb_page": {
+        "canvas_page": {
             "type": "path",
-            "url": "recipes/xb_page"
+            "url": "recipes/canvas_page"
         }
     },
     "require": {
         "composer/installers": "^2.3",
         "cweagans/composer-patches": "^2@beta",
         "drupal/bpmn_io": "^2.0.6",
+        "drupal/canvas": "1.0.0-alpha1",
+        "drupal/canvas_demo": "@dev",
+        "drupal/canvas_page": "@dev",
         "drupal/core": "11.2.0",
         "drupal/core-composer-scaffold": "11.x-dev@dev",
         "drupal/core-recommended": "11.2.0",
         "drupal/dashboard": "^2",
         "drupal/default_content": "^2-alpha@alpha",
-        "drupal/demo_design_system": "1.0.4",
+        "drupal/demo_design_system": "1.0.x-dev",
         "drupal/drupal_cms_admin_ui": "^1.1",
         "drupal/drupal_cms_anti_spam": "^1.1",
         "drupal/drupal_cms_authentication": "^1.1",
         "drupal/drupal_cms_page": "^1.1",
         "drupal/drupal_cms_privacy_basic": "^1.1",
         "drupal/eca": "^2.1.3",
-        "drupal/experience_builder": "^0.5.0-alpha1@alpha",
         "drupal/metatag": "^2.1",
         "drupal/recipe_installer_kit": "^1-alpha3@alpha",
         "drupal/token": "^1",
         "drupal/webform": "6.3.0-beta2",
-        "drupal/xb_demo": "@dev",
-        "drupal/xb_page": "@dev",
         "drush/drush": "^13"
     },
     "conflict": {
@@ -79,11 +79,13 @@
             "drupal/gin": {
                 "#3497793: Dialog styles are not loading correctly in Experience Builder": "https://www.drupal.org/files/issues/2025-07-08/3497793-2025-07-08-gin-dialog.patch"
             },
-            "drupal/experience_builder": {
-                "#3531991: Experience builder has limited built-in metatag features, disable advanced form fields there as initial stop-gap": "https://www.drupal.org/files/issues/2025-07-09/1214.diff.txt"
+            "drupal/canvas": {
+                "#3531991: Drupal Canvas has limited built-in metatag features, disable advanced form fields there as initial stop-gap": "https://www.drupal.org/files/issues/2025-09-08/42.diff",
+                "#3542392: Page path alias is not actually saved when pathauto is installed": "https://www.drupal.org/files/issues/2025-09-09/43.diff"
             },
             "drupal/webform": {
-                "#3526637: Make webform blocks fully validatable and thus show as as dynamic component in Experience Builder": "https://www.drupal.org/files/issues/2025-07-11/webform-block-schema.patch"
+                "#3526637: Make webform blocks fully validatable and thus show as as dynamic component in Experience Builder": "https://www.drupal.org/files/issues/2025-07-11/webform-block-schema.patch",
+                "#3526637: Make webform autocomplete a select list because autocomplate does not work with XB yet": "https://www.drupal.org/files/issues/2025-07-21/webform-block-select-only-for-xb-demo-3.patch"
             }
         }
     }

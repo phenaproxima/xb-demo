@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4ee0c9959c345c6587aca656457e1650",
+    "content-hash": "6a5406fd1b1299963048c504eb4e5330",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1373,6 +1373,178 @@
             }
         },
         {
+            "name": "drupal/canvas",
+            "version": "1.0.0-alpha1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/canvas.git",
+                "reference": "1.0.0-alpha1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/canvas-1.0.0-alpha1.zip",
+                "reference": "1.0.0-alpha1",
+                "shasum": "13f62cc006198e083c1471105dd4e0a4c0339c6d"
+            },
+            "require": {
+                "drupal/core": "^11.2",
+                "justinrainbow/json-schema": "^6.3"
+            },
+            "require-dev": {
+                "devizzent/cebe-php-openapi": "^1.0.3",
+                "drupal/ai": "^1.1",
+                "drupal/ai_agents": "^1.1.2",
+                "drupal/jsonapi_menu_items": "^1.2.8",
+                "drupal/metatag": "^2.1",
+                "drupal/simple_oauth": "^6",
+                "drush/drush": "^13",
+                "jangregor/phpstan-prophecy": "~1|~2",
+                "league/openapi-psr7-validator": "^0.22.0",
+                "mglaman/phpstan-drupal": "^2.0.9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-alpha1",
+                    "datestamp": "1756810897",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Drupal\\renamer\\Rename\\": "scripts/src"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "scripts": {
+                "rename": [
+                    "Drupal\\renamer\\Rename\\ConverterCommand"
+                ],
+                "composer-root": [
+                    "d=.; i=0; while [ $i -lt 10 ]; do if [ -f \"$d/composer.json\" ] && cat \"$d/composer.json\" | grep -q '\"type\"' && cat \"$d/composer.json\" | grep -q '\"project\"'; then readlink -f \"$d\"; break; fi; d=\"../$d\"; i=$((i+1)); done"
+                ],
+                "install-dev-deps": [
+                    "PACKAGES=$(cat composer.json | jq -r '.[\"require-dev\"] // {} | to_entries[] | \"\\(.key):\\(.value)\"' | tr '\\n' ' ') && composer --working-dir=$(composer run composer-root) require ${PACKAGES} --dev"
+                ],
+                "phpcs": [
+                    "mkdir -p test-results && composer --working-dir=$(composer run composer-root) exec phpcs -- --standard=$(pwd)/phpcs.xml --report-width=auto --colors -s --report-junit=$(pwd)/test-results/phpcs.xml --report-full --report-summary $(pwd)"
+                ],
+                "phpcbf": [
+                    "composer --working-dir=$(composer run composer-root) exec phpcbf -- --standard=$(pwd)/phpcs.xml --colors $(pwd)"
+                ],
+                "phpstan": [
+                    "mkdir -p test-results && composer --working-dir=$(composer run composer-root) exec phpstan -- --configuration=$(pwd)/phpstan.neon --error-format=junit analyze $(pwd) > test-results/phpstan.xml || true && composer --working-dir=$(composer run composer-root) exec phpstan -- --configuration=$(pwd)/phpstan.neon analyze $(pwd)"
+                ]
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "balintbrews",
+                    "homepage": "https://www.drupal.org/user/613760"
+                },
+                {
+                    "name": "bnjmnm",
+                    "homepage": "https://www.drupal.org/user/2369194"
+                },
+                {
+                    "name": "effulgentsia",
+                    "homepage": "https://www.drupal.org/user/78040"
+                },
+                {
+                    "name": "f.mazeikis",
+                    "homepage": "https://www.drupal.org/user/3513671"
+                },
+                {
+                    "name": "hooroomoo",
+                    "homepage": "https://www.drupal.org/user/3688872"
+                },
+                {
+                    "name": "isholgueras",
+                    "homepage": "https://www.drupal.org/user/733162"
+                },
+                {
+                    "name": "jessebaker",
+                    "homepage": "https://www.drupal.org/user/3546546"
+                },
+                {
+                    "name": "justafish",
+                    "homepage": "https://www.drupal.org/user/161058"
+                },
+                {
+                    "name": "larowlan",
+                    "homepage": "https://www.drupal.org/user/395439"
+                },
+                {
+                    "name": "lauriii",
+                    "homepage": "https://www.drupal.org/user/1078742"
+                },
+                {
+                    "name": "longwave",
+                    "homepage": "https://www.drupal.org/user/246492"
+                },
+                {
+                    "name": "mglaman",
+                    "homepage": "https://www.drupal.org/user/2416470"
+                },
+                {
+                    "name": "penyaskito",
+                    "homepage": "https://www.drupal.org/user/959536"
+                },
+                {
+                    "name": "tedbow",
+                    "homepage": "https://www.drupal.org/user/240860"
+                },
+                {
+                    "name": "thoward216",
+                    "homepage": "https://www.drupal.org/user/3576535"
+                },
+                {
+                    "name": "tim.plunkett",
+                    "homepage": "https://www.drupal.org/user/241634"
+                },
+                {
+                    "name": "wim leers",
+                    "homepage": "https://www.drupal.org/user/99777"
+                }
+            ],
+            "description": "Canvas",
+            "homepage": "https://www.drupal.org/project/canvas",
+            "support": {
+                "source": "https://git.drupalcode.org/project/canvas"
+            }
+        },
+        {
+            "name": "drupal/canvas_demo",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "recipes/canvas_demo",
+                "reference": "fc0a4b87a23e0fb055e5a2ced0f0ac2615cc89d5"
+            },
+            "type": "drupal-recipe",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "drupal/canvas_page",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "recipes/canvas_page",
+                "reference": "50f4e1d4628b6308d92e13f696947f9f2b958a87"
+            },
+            "type": "drupal-recipe",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "drupal/captcha",
             "version": "2.0.7",
             "source": {
@@ -2204,17 +2376,11 @@
         },
         {
             "name": "drupal/demo_design_system",
-            "version": "1.0.4",
+            "version": "dev-1.0.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/demo_design_system.git",
-                "reference": "1.0.4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/demo_design_system-1.0.4.zip",
-                "reference": "1.0.4",
-                "shasum": "87765be00481b1e34edb1a193a4cc7bfba66f20e"
+                "reference": "6fdbc5d48f84c67f009d64b323812e9bfc0301a1"
             },
             "require": {
                 "drupal/components": "^3@beta",
@@ -2232,12 +2398,15 @@
             },
             "type": "drupal-theme",
             "extra": {
+                "branch-alias": {
+                    "dev-1.0.x": "1.0.x-dev"
+                },
                 "drupal": {
-                    "version": "1.0.4",
-                    "datestamp": "1751992092",
+                    "version": "1.0.6+1-dev",
+                    "datestamp": "1757364802",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -2652,135 +2821,6 @@
             "homepage": "https://www.drupal.org/project/eca",
             "support": {
                 "source": "https://git.drupalcode.org/project/eca"
-            }
-        },
-        {
-            "name": "drupal/experience_builder",
-            "version": "0.5.0-alpha1",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/experience_builder.git",
-                "reference": "0.5.0-alpha1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/experience_builder-0.5.0-alpha1.zip",
-                "reference": "0.5.0-alpha1",
-                "shasum": "e02d0117c133acf947b02dbe80a487cd727200a7"
-            },
-            "require": {
-                "drupal/core": "^11.2",
-                "justinrainbow/json-schema": "^5.2",
-                "php": ">=8.3",
-                "twig/twig": "^3.16"
-            },
-            "require-dev": {
-                "devizzent/cebe-php-openapi": "^1.0.3",
-                "drupal/ai": "^1.1",
-                "drupal/ai_agents": "^1.1",
-                "drupal/metatag": "^2.1",
-                "drupal/simple_oauth": "^6",
-                "jangregor/phpstan-prophecy": "~1|~2",
-                "league/openapi-psr7-validator": "^0.22.0",
-                "webflo/drupal-finder": "^1.3.1"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "0.5.0-alpha1",
-                    "datestamp": "1751657793",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "anjali rathod",
-                    "homepage": "https://www.drupal.org/user/3655906"
-                },
-                {
-                    "name": "balintbrews",
-                    "homepage": "https://www.drupal.org/user/613760"
-                },
-                {
-                    "name": "bnjmnm",
-                    "homepage": "https://www.drupal.org/user/2369194"
-                },
-                {
-                    "name": "effulgentsia",
-                    "homepage": "https://www.drupal.org/user/78040"
-                },
-                {
-                    "name": "f.mazeikis",
-                    "homepage": "https://www.drupal.org/user/3513671"
-                },
-                {
-                    "name": "hooroomoo",
-                    "homepage": "https://www.drupal.org/user/3688872"
-                },
-                {
-                    "name": "isholgueras",
-                    "homepage": "https://www.drupal.org/user/733162"
-                },
-                {
-                    "name": "jessebaker",
-                    "homepage": "https://www.drupal.org/user/3546546"
-                },
-                {
-                    "name": "justafish",
-                    "homepage": "https://www.drupal.org/user/161058"
-                },
-                {
-                    "name": "larowlan",
-                    "homepage": "https://www.drupal.org/user/395439"
-                },
-                {
-                    "name": "lauriii",
-                    "homepage": "https://www.drupal.org/user/1078742"
-                },
-                {
-                    "name": "longwave",
-                    "homepage": "https://www.drupal.org/user/246492"
-                },
-                {
-                    "name": "mglaman",
-                    "homepage": "https://www.drupal.org/user/2416470"
-                },
-                {
-                    "name": "penyaskito",
-                    "homepage": "https://www.drupal.org/user/959536"
-                },
-                {
-                    "name": "tedbow",
-                    "homepage": "https://www.drupal.org/user/240860"
-                },
-                {
-                    "name": "thoward216",
-                    "homepage": "https://www.drupal.org/user/3576535"
-                },
-                {
-                    "name": "tim.plunkett",
-                    "homepage": "https://www.drupal.org/user/241634"
-                },
-                {
-                    "name": "traviscarden",
-                    "homepage": "https://www.drupal.org/user/236758"
-                },
-                {
-                    "name": "wim leers",
-                    "homepage": "https://www.drupal.org/user/99777"
-                }
-            ],
-            "description": "Experience Builder",
-            "homepage": "https://www.drupal.org/project/experience_builder",
-            "support": {
-                "source": "https://git.drupalcode.org/project/experience_builder"
             }
         },
         {
@@ -4143,32 +4183,6 @@
             }
         },
         {
-            "name": "drupal/xb_demo",
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "recipes/xb_demo",
-                "reference": "1582d51c8963cccedbc9ccb4b3254446c4ba98c0"
-            },
-            "type": "drupal-recipe",
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
-            "name": "drupal/xb_page",
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "recipes/xb_page",
-                "reference": "cd00ad1caee831624a2a51e85099f7aa08601ba3"
-            },
-            "type": "drupal-recipe",
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
             "name": "drush/drush",
             "version": "13.6.0",
             "source": {
@@ -4863,30 +4877,40 @@
         },
         {
             "name": "justinrainbow/json-schema",
-            "version": "5.3.0",
+            "version": "6.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jsonrainbow/json-schema.git",
-                "reference": "feb2ca6dd1cebdaf1ed60a4c8de2e53ce11c4fd8"
+                "reference": "b5ab21e431594897e5bb86343c01f140ba862c26"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jsonrainbow/json-schema/zipball/feb2ca6dd1cebdaf1ed60a4c8de2e53ce11c4fd8",
-                "reference": "feb2ca6dd1cebdaf1ed60a4c8de2e53ce11c4fd8",
+                "url": "https://api.github.com/repos/jsonrainbow/json-schema/zipball/b5ab21e431594897e5bb86343c01f140ba862c26",
+                "reference": "b5ab21e431594897e5bb86343c01f140ba862c26",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "ext-json": "*",
+                "marc-mabe/php-enum": "^4.0",
+                "php": "^7.2 || ^8.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "~2.2.20||~2.15.1",
-                "json-schema/json-schema-test-suite": "1.2.0",
-                "phpunit/phpunit": "^4.8.35"
+                "friendsofphp/php-cs-fixer": "3.3.0",
+                "json-schema/json-schema-test-suite": "^23.2",
+                "marc-mabe/php-enum-phpstan": "^2.0",
+                "phpspec/prophecy": "^1.19",
+                "phpstan/phpstan": "^1.12",
+                "phpunit/phpunit": "^8.5"
             },
             "bin": [
                 "bin/validate-json"
             ],
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "6.x-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "JsonSchema\\": "src/JsonSchema/"
@@ -4915,16 +4939,16 @@
                 }
             ],
             "description": "A library to validate a json schema.",
-            "homepage": "https://github.com/justinrainbow/json-schema",
+            "homepage": "https://github.com/jsonrainbow/json-schema",
             "keywords": [
                 "json",
                 "schema"
             ],
             "support": {
                 "issues": "https://github.com/jsonrainbow/json-schema/issues",
-                "source": "https://github.com/jsonrainbow/json-schema/tree/5.3.0"
+                "source": "https://github.com/jsonrainbow/json-schema/tree/6.5.1"
             },
-            "time": "2024-07-06T21:00:26+00:00"
+            "time": "2025-08-29T10:58:11+00:00"
         },
         {
             "name": "laravel/prompts",
@@ -5066,6 +5090,79 @@
                 }
             ],
             "time": "2025-05-20T12:55:37+00:00"
+        },
+        {
+            "name": "marc-mabe/php-enum",
+            "version": "v4.7.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/marc-mabe/php-enum.git",
+                "reference": "7159809e5cfa041dca28e61f7f7ae58063aae8ed"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/marc-mabe/php-enum/zipball/7159809e5cfa041dca28e61f7f7ae58063aae8ed",
+                "reference": "7159809e5cfa041dca28e61f7f7ae58063aae8ed",
+                "shasum": ""
+            },
+            "require": {
+                "ext-reflection": "*",
+                "php": "^7.1 | ^8.0"
+            },
+            "require-dev": {
+                "phpbench/phpbench": "^0.16.10 || ^1.0.4",
+                "phpstan/phpstan": "^1.3.1",
+                "phpunit/phpunit": "^7.5.20 | ^8.5.22 | ^9.5.11",
+                "vimeo/psalm": "^4.17.0 | ^5.26.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-3.x": "3.2-dev",
+                    "dev-master": "4.7-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "MabeEnum\\": "src/"
+                },
+                "classmap": [
+                    "stubs/Stringable.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Marc Bennewitz",
+                    "email": "dev@mabe.berlin",
+                    "homepage": "https://mabe.berlin/",
+                    "role": "Lead"
+                }
+            ],
+            "description": "Simple and fast implementation of enumerations with native PHP",
+            "homepage": "https://github.com/marc-mabe/php-enum",
+            "keywords": [
+                "enum",
+                "enum-map",
+                "enum-set",
+                "enumeration",
+                "enumerator",
+                "enummap",
+                "enumset",
+                "map",
+                "set",
+                "type",
+                "type-hint",
+                "typehint"
+            ],
+            "support": {
+                "issues": "https://github.com/marc-mabe/php-enum/issues",
+                "source": "https://github.com/marc-mabe/php-enum/tree/v4.7.1"
+            },
+            "time": "2024-11-28T04:54:44+00:00"
         },
         {
             "name": "masterminds/html5",
@@ -9092,13 +9189,14 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "cweagans/composer-patches": 10,
+        "drupal/canvas": 15,
+        "drupal/canvas_demo": 20,
+        "drupal/canvas_page": 20,
         "drupal/core-composer-scaffold": 20,
         "drupal/default_content": 15,
-        "drupal/experience_builder": 15,
+        "drupal/demo_design_system": 20,
         "drupal/recipe_installer_kit": 15,
-        "drupal/webform": 10,
-        "drupal/xb_demo": 20,
-        "drupal/xb_page": 20
+        "drupal/webform": 10
     },
     "prefer-stable": true,
     "prefer-lowest": false,

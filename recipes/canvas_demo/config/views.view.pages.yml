@@ -2,13 +2,13 @@ langcode: en
 status: true
 dependencies:
   module:
-    - experience_builder
+    - canvas
 id: pages
 label: Pages
 module: views
 description: ''
 tag: ''
-base_table: xb_page_field_data
+base_table: canvas_page_field_data
 base_field: id
 display:
   default:
@@ -21,7 +21,7 @@ display:
       fields:
         title:
           id: title
-          table: xb_page_field_data
+          table: canvas_page_field_data
           field: title
           relationship: none
           group_type: group
@@ -86,12 +86,12 @@ display:
           field_api_classes: false
         changed:
           id: changed
-          table: xb_page_field_data
+          table: canvas_page_field_data
           field: changed
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: xb_page
+          entity_type: canvas_page
           entity_field: changed
           plugin_id: field
           label: 'Last changed'
@@ -188,9 +188,9 @@ display:
       filters:
         status:
           id: status
-          table: xb_page_field_data
+          table: canvas_page_field_data
           field: status
-          entity_type: xb_page
+          entity_type: canvas_page
           entity_field: status
           plugin_id: boolean
           value: '1'

@@ -1,5 +1,5 @@
-name: 'XB Demo Blocks'
-description: 'Provides content blocks for the XB demo. Must be applied before the xb_demo recipe.'
+name: 'Drupal Canvas Demo Blocks'
+description: 'Provides content blocks for the Drupal Canvas demo. Must be applied before the canvas_demo recipe.'
 type: 'Demo'
 recipes:
   - core/recipes/basic_block_type

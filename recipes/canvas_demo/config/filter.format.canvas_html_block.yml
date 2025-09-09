@@ -3,11 +3,11 @@ status: true
 dependencies:
   enforced:
     module:
-      - experience_builder
+      - canvas
   module:
     - linkit
-name: 'Experience Builder — Block HTML (locked)'
-format: xb_html_block
+name: 'Canvas — Block HTML (locked)'
+format: canvas_html_block
 weight: 1000
 filters:
   filter_html:

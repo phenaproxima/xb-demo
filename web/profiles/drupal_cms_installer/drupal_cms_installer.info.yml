@@ -7,15 +7,15 @@ description: 'Provides install-time tweaks for Drupal CMS. Not to be used in pro
 distribution:
   name: Drupal CMS
   install:
-    finish_url: 'xb/xb_page/1'
+    finish_url: 'canvas/canvas_page/1'
     theme: drupal_cms_installer_theme
 
 forms: []
 
 recipes:
   required:
-    - drupal/xb_demo
-    - drupal/xb_page
+    - drupal/canvas_demo
+    - drupal/canvas_page
 
 # Explicitly provide an empty list of themes -- this prevents the installer from
 # injecting Stark into it.

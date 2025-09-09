@@ -1,5 +1,5 @@
 {
-    "_hash": "d83373327d3c4aa61eb00ba793bfd99b114ceae7f5dfdc727ee338c9f099c048",
+    "_hash": "5c06e6835c2d009381d6cd45eeb0b76c0512a0049119d068e8578363985ad9f9",
     "patches": {
         "drupal/gin": [
             {
@@ -13,12 +13,22 @@
                 }
             }
         ],
-        "drupal/experience_builder": [
+        "drupal/canvas": [
             {
-                "package": "drupal/experience_builder",
-                "description": "#3531991: Experience builder has limited built-in metatag features, disable advanced form fields there as initial stop-gap",
-                "url": "https://www.drupal.org/files/issues/2025-07-09/1214.diff.txt",
-                "sha256": "24dea856ad226fa23d8b5abe242f8fd75f6351fdc317fdbd97a68d47b26a72fb",
+                "package": "drupal/canvas",
+                "description": "#3531991: Drupal Canvas has limited built-in metatag features, disable advanced form fields there as initial stop-gap",
+                "url": "https://www.drupal.org/files/issues/2025-09-08/42.diff",
+                "sha256": "f9e51f666ed489e881127ab3807d4922b986130578c88b9bf44101364eb94712",
+                "depth": 1,
+                "extra": {
+                    "provenance": "root"
+                }
+            },
+            {
+                "package": "drupal/canvas",
+                "description": "#3542392: Page path alias is not actually saved when pathauto is installed",
+                "url": "https://www.drupal.org/files/issues/2025-09-09/43.diff",
+                "sha256": "4de185fdb44005440e36587a63ff215d4a8bbe57b06a2ff111730bee72cab497",
                 "depth": 1,
                 "extra": {
                     "provenance": "root"
@@ -31,6 +41,16 @@
                 "description": "#3526637: Make webform blocks fully validatable and thus show as as dynamic component in Experience Builder",
                 "url": "https://www.drupal.org/files/issues/2025-07-11/webform-block-schema.patch",
                 "sha256": "c147d187e3e30335ef7b15b59e0e19beb1d79cb447286da8c8b25d7b4c3de3e9",
+                "depth": 1,
+                "extra": {
+                    "provenance": "root"
+                }
+            },
+            {
+                "package": "drupal/webform",
+                "description": "#3526637: Make webform autocomplete a select list because autocomplate does not work with XB yet",
+                "url": "https://www.drupal.org/files/issues/2025-07-21/webform-block-select-only-for-xb-demo-3.patch",
+                "sha256": "b47fb35b45285e6023ab30ac599ab9c59b85963486bc26bae4ca193bd51a4bbe",
                 "depth": 1,
                 "extra": {
                     "provenance": "root"
